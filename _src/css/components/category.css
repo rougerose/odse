@@ -1,0 +1,25 @@
+.c-category {}
+	
+.c-category__title {
+	position: relative;
+	font-family: 'CenturyGothic', sans-serif;
+	text-transform: uppercase;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		z-index: -1;
+		content: '';
+		display: block;
+		width: 32px;
+		height: 32px;
+		background-color: red;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.c-category__title--infos:before {background-color: var(--infos);}
+.c-category__title--actions:before {background-color: var(--actions);}
+.c-category__title--recherche:before {background-color: var(--recherche);}
+.c-category__title--odse:before {background-color: var(--odse);}

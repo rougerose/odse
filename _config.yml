@@ -1,0 +1,17 @@
+# Site settings
+title: ODSE
+email: ""
+description: ""
+baseurl: "/odse"
+#url: "http://rougerose.github.io"
+#github: "http://rougerose.github.io/odse"
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - yarn.lock
+  - package-lock.json

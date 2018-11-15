@@ -1,0 +1,16 @@
+.c-overlay-sitenav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	transition: max-height 1s cubic-bezier(0.26, 0.02, 0, 0.99);
+	max-height: 0;
+	display: block;
+}
+
+.c-overlay-sitenav.is-open {
+	max-height: 100%;
+	overflow-y: scroll;
+}

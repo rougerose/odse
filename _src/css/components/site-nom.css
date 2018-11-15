@@ -1,0 +1,59 @@
+.c-site-nom {
+	margin: 0;
+	padding: .5em 1rem;
+	position: relative;
+	
+	font-family: 'CenturyGothic', sans-serif;
+	font-size: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+	
+	&:before,
+	&:after {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		display: block;
+		height: 1px;
+		left: 0;
+		right: 0;
+		background-color: var(--odse);
+	}
+	
+	&:before {
+		top: 0;
+	}
+	
+	&:after {
+		bottom: 0;
+	}
+}
+
+
+@media (--breakpoint-medium-plus) {
+	.c-site-nom {
+		font-size: 1.5rem;
+		
+		> span {
+			padding-left: 1rem;
+			padding-right: 1rem;
+			background-color: #fff;
+		}
+		
+		&:before,
+		&:after {
+			top: 50%;
+			width: 20%;
+		}
+		
+		&:before {
+			left: 0;
+			right: auto;
+		}
+		
+		&:after {
+			right: 0;
+			left: auto;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+/* Webfont: Rockwell-Italic */@font-face {
+    font-family: 'Rockwell';
+    src: url('Rockwell-Italic.eot'); /* IE9 Compat Modes */
+    src: url('Rockwell-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Rockwell-Italic.woff') format('woff'), /* Modern Browsers */
+         url('Rockwell-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Rockwell-Italic.svg#Rockwell-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

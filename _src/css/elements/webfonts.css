@@ -1,0 +1,96 @@
+/* Webfont: CenturyGothic-Bold */
+@font-face {
+	font-family: 'CenturyGothic';
+	src: url('webfonts/CenturyGothic-Bold.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/CenturyGothic-Bold.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/CenturyGothic-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: bold;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: CenturyGothic-BoldItalic */
+@font-face {
+	font-family: 'CenturyGothic';
+	src: url('webfonts/CenturyGothic-BoldItalic.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/CenturyGothic-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/CenturyGothic-BoldItalic.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/CenturyGothic-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/CenturyGothic-BoldItalic.svg#CenturyGothic-BoldItalic') format('svg'); /* Legacy iOS */
+	font-style: italic;
+	font-weight: bold;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: CenturyGothic-Italic */
+@font-face {
+	font-family: 'CenturyGothic';
+	src: url('webfonts/CenturyGothic-Italic.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/CenturyGothic-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/CenturyGothic-Italic.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/CenturyGothic-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/CenturyGothic-Italic.svg#CenturyGothic-Italic') format('svg'); /* Legacy iOS */
+	font-style: italic;
+	font-weight: normal;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: CenturyGothic */
+@font-face {
+	font-family: 'CenturyGothic';
+	src: url('webfonts/CenturyGothic.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/CenturyGothic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/CenturyGothic.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/CenturyGothic.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/CenturyGothic.svg#CenturyGothic') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: normal;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: Rockwell-Bold */
+@font-face {
+	font-family: 'Rockwell';
+	src: url('webfonts/Rockwell-Bold.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/Rockwell-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/Rockwell-Bold.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/Rockwell-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/Rockwell-Bold.svg#Rockwell-Bold') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: bold;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: Rockwell-BoldItalic */
+@font-face {
+	font-family: 'Rockwell';
+	src: url('webfonts/Rockwell-BoldItalic.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/Rockwell-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/Rockwell-BoldItalic.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/Rockwell-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/Rockwell-BoldItalic.svg#Rockwell-BoldItalic') format('svg'); /* Legacy iOS */
+	font-style: italic;
+	font-weight: bold;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: Rockwell-Italic */
+@font-face {
+	font-family: 'Rockwell';
+	src: url('webfonts/Rockwell-Italic.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/Rockwell-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/Rockwell-Italic.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/Rockwell-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/Rockwell-Italic.svg#Rockwell-Italic') format('svg'); /* Legacy iOS */
+	font-style: italic;
+	font-weight: normal;
+	/* text-rendering: optimizeLegibility; */
+}
+/* Webfont: Rockwell */
+@font-face {
+	font-family: 'Rockwell';
+	src: url('webfonts/Rockwell.eot'); /* IE9 Compat Modes */
+	src: url('webfonts/Rockwell.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('webfonts/Rockwell.woff') format('woff'), /* Modern Browsers */
+		 url('webfonts/Rockwell.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('webfonts/Rockwell.svg#Rockwell') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: normal;
+	/* text-rendering: optimizeLegibility; */
+}

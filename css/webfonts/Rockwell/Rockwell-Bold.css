@@ -1,0 +1,12 @@
+/* Webfont: Rockwell-Bold */@font-face {
+    font-family: 'Rockwell';
+    src: url('Rockwell-Bold.eot'); /* IE9 Compat Modes */
+    src: url('Rockwell-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Rockwell-Bold.woff') format('woff'), /* Modern Browsers */
+         url('Rockwell-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Rockwell-Bold.svg#Rockwell-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

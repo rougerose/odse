@@ -1,0 +1,25 @@
+:root {
+	--zindex-menu: 100;
+}
+
+
+.c-btn--burger {
+	position: relative;
+	z-index: var(--zindex-menu);
+	top: -2px;
+	border: 0;
+	height: 22px;
+	width: 38px;
+	padding: 0;
+	color: #fff;
+	background-color: transparent;
+	cursor: pointer;
+	
+	&:hover .o-icon--burger {
+		&,
+		&:before,
+		&:after {
+			background-color: var(--odse);
+		}
+	}
+}
