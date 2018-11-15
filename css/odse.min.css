@@ -6556,6 +6556,15 @@ html {
 	margin-top: 1rem;
 	font-family: 'CenturyGothic', sans-serif;
 	text-transform: uppercase;
+	color: #000;
+	-webkit-transition: color .02s ease;
+	-o-transition: color .02s ease;
+	transition: color .02s ease
+}
+
+.c-link-more:hover {
+  color: rgb(126, 0, 128);
+  color: var(--odse);
 }
 
 .c-overlay-sitenav {

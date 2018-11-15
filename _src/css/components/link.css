@@ -3,4 +3,10 @@
 	margin-top: 1rem;
 	font-family: 'CenturyGothic', sans-serif;
 	text-transform: uppercase;
+	color: #000;
+	transition: color .02s ease;
+	
+	&:hover {
+		color: var(--odse);
+	}
 }
