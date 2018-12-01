@@ -3,16 +3,29 @@
 var gulp = require('gulp')
 var browserSync = require('browser-sync')
 var cp = require('child_process')
-var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer')
-var atImport = require('postcss-import')
+var postcss = require('gulp-postcss')
 var cssnano = require('cssnano')
 var rename = require('gulp-rename')
-var precss = require('precss')
 var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var wrap = require('gulp-wrap')
 var pump = require('pump')
+var scss = require('gulp-sass')
+
+scss.compiler = require('node-sass');
+
+var options = {
+	scss: {
+		paths: ['./node_modules'],
+		file: '_src/scss/odse.scss',
+		files: '_src/scss/**/*.scss',
+		destination: 'css'
+	},
+	css: {
+		file: 'css/odse.css'
+	}
+}
 
 var messages = {
 	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -43,7 +56,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['css', 'compile:js', 'minify:js', 'jekyll-build'], function () {
+gulp.task('browser-sync', ['compile:scss', 'compile:css', 'compile:js', 'minify:js', 'jekyll-build'], function () {
 	browserSync({
 		server: {
 			baseDir: '_site',
@@ -53,18 +66,30 @@ gulp.task('browser-sync', ['css', 'compile:js', 'minify:js', 'jekyll-build'], fu
 })
 
 /**
+ * SCSS
+ */
+gulp.task('compile:scss', function() {
+	gulp.src(options.scss.file)
+		.pipe(scss({
+			includePaths: options.scss.paths,
+			sourceComments: true,
+			outputStyle: "compact"
+		}).on('error', scss.logError))
+		.pipe(gulp.dest(options.scss.destination))
+})
+
+
+/**
  * CSS
  */
-gulp.task('css', function(){
+gulp.task('compile:css', function(){
 	var plugins = [
-		// autoprefixer({browsers: ['last 1 version']}),
-		atImport(),
-		precss(),
-		autoprefixer(['last 15 versions', '> 1%'], { cascade: true }),
-		// cssnano(),
+		autoprefixer(),
+		cssnano(),
 	];
-	return gulp.src(globs.css)
+	return gulp.src(options.css.file)
 		.pipe(postcss(plugins))
+		// .pipe(rename({basename: 'styles', suffix: '.min'}))
 		.pipe(rename({suffix: '.min'}))
 		.pipe( gulp.dest('css/') )
 })
@@ -102,7 +127,9 @@ gulp.task('lib', function(cb) {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-	gulp.watch(['_src/css/**/*.css'], ['css', 'jekyll-rebuild'])
+	// gulp.watch(['_src/css/**/*.css'], ['css', 'jekyll-rebuild'])
+	gulp.watch([options.scss.files], ['compile:scss', 'jekyll-rebuild'])
+	gulp.watch([options.css.file], ['compile:css', 'jekyll-rebuild'])
 	gulp.watch(['_src/js/*.js'], ['compile:js', 'minify:js', 'jekyll-rebuild'])
 	gulp.watch(['./*.html', '_layouts/*.html', '_includes/*.html', '_config.yml'], ['jekyll-rebuild'])
 })
