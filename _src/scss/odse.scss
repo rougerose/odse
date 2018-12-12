@@ -67,6 +67,8 @@
 // SETTINGS
 // @import "inuitcss/settings/example.settings.config";
 @import "inuitcss/settings/settings.core";
+@import "settings/settings";
+@import "settings/colors";
 // @import "inuitcss/settings/example.settings.global";
 
 
@@ -75,6 +77,7 @@
 @import "inuitcss/tools/tools.clearfix";
 @import "inuitcss/tools/tools.hidden";
 @import "sass-mq/mq";
+@import "tools/alias";
 
 
 // GENERIC
@@ -85,18 +88,22 @@
 
 
 // ELEMENTS
+@import "elements/webfonts";
 @import "inuitcss/elements/elements.page";
+@import "elements/page";
 @import "inuitcss/elements/elements.headings";
+@import "elements/headings";
 @import "inuitcss/elements/elements.images";
 @import "inuitcss/elements/elements.tables";
+@import "elements/links";
 
 
 // OBJECTS
-// @import "inuitcss/objects/objects.wrapper";
+@import "inuitcss/objects/objects.wrapper";
 // @import "inuitcss/objects/objects.layout";
 // @import "inuitcss/objects/objects.media";
 // @import "inuitcss/objects/objects.flag";
-// @import "inuitcss/objects/objects.list-bare";
+@import "inuitcss/objects/objects.list-bare";
 // @import "inuitcss/objects/objects.list-inline";
 // @import "inuitcss/objects/objects.box";
 // @import "inuitcss/objects/objects.block";
@@ -105,10 +112,19 @@
 // @import "inuitcss/objects/objects.table";
 // @import "inuitcss/objects/objects.pack";
 @import "inuit-flexgrid/objects/objects.grid";
+@import "objects/object.media";
+@import "objects/icon";
 
 
 // COMPONENTS
 // @import "inuitcss/components/example.components.buttons";
+@import "components/page";
+@import "components/site-nav";
+@import "components/btn";
+@import "components/link-plus";
+
+@import "components/preview";
+@import "components/article-preview";
 
 
 // UTILITIES

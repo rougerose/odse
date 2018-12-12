@@ -1,0 +1,94 @@
+// =====================================
+// c-preview
+// =====================================
+
+.c-preview {
+	
+	&--odse {
+		background: $color-purple-800;
+		background: linear-gradient(180deg, $color-purple-900 60%, $color-odse 100%);
+	}
+}
+
+	// ----- c-preview__container ----- //
+	.c-preview__container {
+		padding: $spacing-unit-large $spacing-unit;
+		margin-right: auto;
+		margin-left:  auto;
+		max-width: $inuit-wrapper-width;
+	}
+	
+	
+	// ----- c-preview__link ----- //
+	.c-preview__link {
+		display: block;
+		
+		&--odse {
+			display: block;
+			color: #fff;
+			transition: color .3s ease;
+			
+			@include mq(lg) {
+				display: flex;
+				justify-content: space-between;
+				
+				> .c-preview__header {
+					flex: 1;
+					margin-right: $spacing-unit-small;
+				}
+				
+				> .c-preview__content {
+					margin-top: 0;
+					flex: 2;
+				}
+			}
+		}
+	}
+	
+	
+	// ----- c-preview__header ----- //
+	.c-preview__header {}
+	
+	
+		// ----- c-preview__title ----- //
+		.c-preview__title {
+			margin-bottom: 0;
+			@include font-size(24px, 1);
+			text-transform: uppercase;
+		}
+		
+		.c-preview__title--category {
+			position: relative;
+			padding-left: $spacing-unit;
+			
+			&::before {
+				display: block;
+				height: 18px;
+				width: 18px;
+				position: absolute;
+				left: 0;
+				background-color: red;
+				content: '';
+				border-radius: 50%;
+			}
+			
+			&-infos::before {background-color: $color-informer;}
+			&-actions::before {background-color: $color-actions;}
+			&-odse::before {background-color: $color-odse;}
+			&-recherche::before {background-color: $color-recherche;}
+		}
+	
+	
+	// ----- c-preview__content ----- //
+	.c-preview__content {
+		
+		&--odse {
+			margin-top: $spacing-unit;
+			@include font-size(20px);
+			
+			@include mq(md) {
+				@include font-size(22px);
+			}
+		}
+	}
+	

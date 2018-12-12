@@ -100,7 +100,7 @@ gulp.task('compile:css', function(){
 gulp.task('compile:js', function() {
 	gulp.src(globs.js)
 		.pipe(concat('odse.js'))
-		.pipe(wrap('$(function(){\n<%= contents %>\n});'))
+		// .pipe(wrap('$(function(){\n<%= contents %>\n});'))
 		.pipe(gulp.dest('js/'))
 })
 

@@ -1,0 +1,37 @@
+// =====================================
+// settings
+// =====================================
+
+
+//
+// inuitcss
+// -------------------------------------
+	$global-radius: 3px !default;
+	$global-transition: all .3s ease-in-out !default;
+
+	$inuit-fractions: 1 2 3 4 5 6 !default;
+
+//
+// mediaqueries
+// -------------------------------------
+$mq-breakpoints: (
+	xs: 320px, // 20em
+	sm: 439px, // 27.43em
+	md: 640px, // 40em
+	lg: 768px, // 48em
+	xl: 1024px
+);
+
+//
+// ODSE
+// -------------------------------------
+
+	// ----- font ----- //
+		$font-CG: 'CenturyGothic', sans-serif;
+		$font-C: 'Century', serif;
+	
+	// ----- transitions ----- //
+		$transition-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+	// ----- z-index ----- //
+		$zindex-site-nav: 10;

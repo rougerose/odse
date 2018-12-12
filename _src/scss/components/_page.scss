@@ -1,0 +1,105 @@
+// =====================================
+// c-page
+// =====================================
+
+$mq-site-nav: 900px;
+
+.c-page {}
+
+	//
+	// c-page-section
+	// -------------------------------------
+	.c-page-section {
+		text-transform: uppercase;
+	}
+	
+		// ----- c-page-section__title ----- //
+		.c-page-section__title {
+			position: relative;
+			color: $color-odse;
+			@include font-size(18px, 1.2);
+			font-weight: normal;
+			
+			&::before,
+			&::after {
+				display: block;
+				position: absolute;
+				top: 50%;
+				z-index: $zindex-site-nav - 2;
+				height: 1px;
+				width: 50%;
+				background-color: $color-odse;
+				content: '';
+			}
+			
+			&::before {left: 0;}
+			&::after {right: 0;}
+			
+			> span {
+				display: inline-block;
+				position: relative;
+				z-index: $zindex-site-nav - 1;
+				margin: 0 $spacing-unit;
+				background-color: $color-white;
+				transition: color 1s cubic-bezier(0.26, 0.02, 0, 0.99), background 1s cubic-bezier(0.26, 0.02, 0, 0.99);
+				
+				@include mq(500px) {
+					margin: 0;
+					padding: 0 $spacing-unit;
+				}
+			}
+			
+			@include mq($until: $mq-site-nav) {
+				&.is-open {
+					> span {
+						background-color: $color-black;
+						color: $color-white;
+					}
+				}
+			}
+			
+			@include mq(md) {
+				@include font-size(20px, 1.2);
+			}
+		}
+
+
+	//
+	// c-page-head
+	// -------------------------------------
+	.c-page-head {
+		margin-bottom: $spacing-unit-large;
+	}
+	
+	
+		// ----- c-page-head__title ----- //
+		.c-page-head__title {
+			margin: $spacing-unit 0;
+			text-align: center;
+		}
+	
+	
+	//
+	// c-page-foot
+	// -------------------------------------
+	.c-page-foot {
+		margin: $spacing-unit 0;
+		font-family: $font-CG;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	
+		// ----- c-page-foot__title ----- //
+		.c-page-foot__title {
+			position: relative;
+			margin-bottom: $spacing-unit-small;
+		}
+		
+		
+		// ----- c-page-foot__nav ----- //
+		.c-page-foot__nav {
+			> a {
+				margin: 0 $spacing-unit-small;
+				@include font-size(14px);
+			}
+		}

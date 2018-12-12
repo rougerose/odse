@@ -1,0 +1,20 @@
+// =====================================
+// link-plus
+// =====================================
+
+.c-link-plus {
+	display: inline-block;
+	margin-bottom: 0;
+	font-family: $font-CG;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	&--preview {
+		border-bottom: 1px solid $color-white;
+		@include font-size(14px);
+	}
+	
+	&--preview-odse {
+		@include font-size(18px);
+	}
+}

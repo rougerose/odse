@@ -1,0 +1,111 @@
+// =====================================
+// webfonts
+// =====================================
+
+// ----- Century ----- //
+
+/* Webfont: ITCCenturyStd-Book */
+	@font-face {
+		font-family: 'Century';
+		src: url('webfonts/ITCCentury/ITCCenturyStd-Book.eot');
+		src: url('webfonts/ITCCentury/ITCCenturyStd-Book.eot?#iefix') format('embedded-opentype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-Book.woff') format('woff'),
+				url('webfonts/ITCCentury/ITCCenturyStd-Book.ttf') format('truetype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-Book.svg#ITCCenturyStd-Book') format('svg');
+		font-style: normal;
+		font-weight: normal;
+		text-rendering: optimizeLegibility;
+	}
+
+/* Webfont: ITCCenturyStd-BookItalic */
+	@font-face {
+		font-family: 'Century';
+		src: url('webfonts/ITCCentury/ITCCenturyStd-BookItalic.eot');
+		src: url('webfonts/ITCCentury/ITCCenturyStd-BookItalic.eot?#iefix') format('embedded-opentype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-BookItalic.woff') format('woff'),
+				url('webfonts/ITCCentury/ITCCenturyStd-BookItalic.ttf') format('truetype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-BookItalic.svg#ITCCenturyStd-BookItalic') format('svg');
+		font-style: italic;
+		font-weight: normal;
+		text-rendering: optimizeLegibility;
+	}
+
+/* Webfont: ITCCenturyStd-Bold */
+	@font-face {
+		font-family: 'Century';
+		src: url('webfonts/ITCCentury/ITCCenturyStd-Bold.eot');
+		src: url('webfonts/ITCCentury/ITCCenturyStd-Bold.eot?#iefix') format('embedded-opentype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-Bold.woff') format('woff'),
+				url('webfonts/ITCCentury/ITCCenturyStd-Bold.ttf') format('truetype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-Bold.svg#ITCCenturyStd-Bold') format('svg');
+		font-style: normal;
+		font-weight: bold;
+		text-rendering: optimizeLegibility;
+	}
+
+/* Webfont: ITCCenturyStd-BoldItalic */
+	@font-face {
+		font-family: 'Century';
+		src: url('webfonts/ITCCentury/ITCCenturyStd-BoldItalic.eot');
+		src: url('webfonts/ITCCentury/ITCCenturyStd-BoldItalic.eot?#iefix') format('embedded-opentype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-BoldItalic.woff') format('woff'),
+				url('webfonts/ITCCentury/ITCCenturyStd-BoldItalic.ttf') format('truetype'),
+				url('webfonts/ITCCentury/ITCCenturyStd-BoldItalic.svg#ITCCenturyStd-BoldItalic') format('svg');
+		font-style: italic;
+		font-weight: bold;
+		text-rendering: optimizeLegibility;
+	}
+
+
+// ----- CenturyGothic ----- //
+/* Webfont: CenturyGothic */
+	@font-face {
+		font-family: 'CenturyGothic';
+		src: url('webfonts/CenturyGothic.eot');
+		src: url('webfonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+			 url('webfonts/CenturyGothic.woff') format('woff'),
+			 url('webfonts/CenturyGothic.ttf') format('truetype'),
+			 url('webfonts/CenturyGothic.svg#CenturyGothic') format('svg');
+		font-style: normal;
+		font-weight: normal;
+		text-rendering: optimizeLegibility;
+	}
+	
+/* Webfont: CenturyGothic-Italic */
+	@font-face {
+		font-family: 'CenturyGothic';
+		src: url('webfonts/CenturyGothic-Italic.eot');
+		src: url('webfonts/CenturyGothic-Italic.eot?#iefix') format('embedded-opentype'),
+			 url('webfonts/CenturyGothic-Italic.woff') format('woff'),
+			 url('webfonts/CenturyGothic-Italic.ttf') format('truetype'),
+			 url('webfonts/CenturyGothic-Italic.svg#CenturyGothic-Italic') format('svg');
+		font-style: italic;
+		font-weight: normal;
+		text-rendering: optimizeLegibility;
+	}
+
+/* Webfont: CenturyGothic-Bold */
+	@font-face {
+		font-family: 'CenturyGothic';
+		src: url('webfonts/CenturyGothic-Bold.eot');
+		src: url('webfonts/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+			 url('webfonts/CenturyGothic-Bold.woff') format('woff'),
+			 url('webfonts/CenturyGothic-Bold.ttf') format('truetype'),
+			 url('webfonts/CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg');
+		font-style: normal;
+		font-weight: bold;
+		text-rendering: optimizeLegibility;
+	}
+
+/* Webfont: CenturyGothic-BoldItalic */
+	@font-face {
+		font-family: 'CenturyGothic';
+		src: url('webfonts/CenturyGothic-BoldItalic.eot');
+		src: url('webfonts/CenturyGothic-BoldItalic.eot?#iefix') format('embedded-opentype'),
+			 url('webfonts/CenturyGothic-BoldItalic.woff') format('woff'),
+			 url('webfonts/CenturyGothic-BoldItalic.ttf') format('truetype'),
+			 url('webfonts/CenturyGothic-BoldItalic.svg#CenturyGothic-BoldItalic') format('svg');
+		font-style: italic;
+		font-weight: bold;
+		text-rendering: optimizeLegibility;
+	}

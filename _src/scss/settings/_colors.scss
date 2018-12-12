@@ -1,0 +1,24 @@
+// =====================================
+// settings : colors
+// =====================================
+
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 100%, 100%);
+$color-orange:     hsl(26,73%,53%);
+$color-red-orange: hsl(19,100%,41%);
+$color-green:      hsl(98,100%,25%);
+
+$color-red-700: hsl(0, 65%, 51%);
+
+$color-purple-900: hsl(299,100%,5%);
+$color-purple-800: hsl(299,100%,10%);
+$color-purple-700: hsl(299,100%,25%);
+$color-purple-500: hsl(299,100%,50%);
+
+//
+// Couleurs identitaires ODSE
+// -------------------------------------
+$color-odse:      $color-purple-700;
+$color-informer:  $color-orange;
+$color-actions:   $color-red-orange;
+$color-recherche: $color-green;
