@@ -72,3 +72,33 @@ $transition-function-icon-burger: cubic-bezier(0.215, 0.61, 0.355, 1);
 	width: 32px;
 	height: 32px;
 }
+
+//
+// o-icon--filter
+// -------------------------------------
+.o-icon--filter {
+	width: 24px;
+	height: 24px;
+}
+
+//
+// o-icon--dot
+// -------------------------------------
+.o-icon--dot {
+	&-informer {
+		fill: $color-informer;
+	}
+	&-actions {
+		fill: $color-actions;
+	}
+	&-odse {
+		fill: $color-odse;
+	}
+}
+
+.o-icon--remove {
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+	fill: darken($color-informer,20%);
+}

@@ -1,0 +1,39 @@
+// =====================================
+// c-tag
+// =====================================
+
+
+.c-tag {
+	color: $color-grey-500;
+	transition: color .3s ease;
+	
+	.c-article-preview__link--category-infos:hover & {
+		color: darken($color-informer, 25%);
+	}
+	.c-article-preview__link--category-actions:hover & {
+		color: darken($color-actions, 25%);
+	}
+	
+	&--article {
+		color: $color-black;
+	}
+}
+
+	.c-tag-list {}
+	
+		.c-tag-list__item {
+			display: inline-block;
+			border: 1px solid $color-grey-200;
+			border-radius: 3px;
+			margin-bottom: 3px;
+			padding: 4px 3px 0;
+			white-space: nowrap;
+			transition: border .3s ease;
+			
+			.c-article-preview__link--category-infos:hover & {
+				border-color: darken($color-informer, 25%);
+			}
+			.c-article-preview__link--category-actions:hover & {
+				border-color: darken($color-actions, 25%);
+			}
+		}

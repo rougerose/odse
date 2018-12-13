@@ -1,6 +1,6 @@
 /* ==========================================================================
-   #BUTTONS
-   ========================================================================== */
+	#BUTTONS
+	========================================================================== */
 
 /**
  * This is an example component. Extend inuitcss by building your own components
@@ -30,24 +30,23 @@
 
 
 /* Style variants
-   ========================================================================== */
+	========================================================================== */
 
 .c-btn--primary {
-  background-color: #4a8ec2;
+	background-color: #4a8ec2;
 
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none; /* [4] */
-    color: #fff;
-  }
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none; /* [4] */
+		color: #fff;
+	}
 
-  &:hover,
-  &:focus {
-    background-color: #3774a2;
-  }
-
+	&:hover,
+	&:focus {
+		background-color: #3774a2;
+	}
 }
 
 
@@ -58,13 +57,13 @@
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
-    color: #fff;
+	 text-decoration: none;
+	 color: #fff;
   }
 
   &:hover,
   &:focus {
-    background-color: #1d2733;
+	 background-color: #1d2733;
   }
 
 }
@@ -78,20 +77,20 @@
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none;
-    color: #4a8ec2;
+	 text-decoration: none;
+	 color: #4a8ec2;
   }
 
   &:hover,
   &:focus {
-    color: #3774a2;
+	 color: #3774a2;
   }
 
 }
 
 
 /* Size variants
-   ========================================================================== */
+	========================================================================== */
 
 .c-btn--small {
   padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
@@ -130,12 +129,65 @@
 	.c-btn--flat {
 		border: none;
 		border-radius: 0;
+		padding: 0;
 		background-color: transparent;
 	}
+	
+	
+	.c-btn--filter {
+		border: none;
+		border-bottom: 1px solid $color-black;
+		border-radius: 0;
+		padding: ($spacing-unit-small / 2) $spacing-unit-tiny ($spacing-unit-tiny / 2);
+		font-family: $font-CG;
+		font-weight: bold;
+		background-color: transparent;
+		color: $color-black;
+		text-transform: uppercase;
+		
+		> .o-icon--filter {
+			margin: -3px 3px 3px;
+			fill: $color-black;
+			vertical-align: middle;
+			transition: fill .3s ease;
+		}
+		
+		&:hover,
+		&:focus {}
+		
+		&-infos {
+			margin-bottom: -1px;
+		
+			&:hover,
+		   &:focus,
+			&.is-open {
+				color: $color-informer;
+		 		border-color: $color-informer;
+				
+				> .o-icon--filter {
+					fill: $color-informer;
+				}
+		   }
+		}
+	}
+	
+	.c-btn--shadow {
+		box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+		transition:  box-shadow .28s cubic-bezier(.4,0,.2,1);
+		
+		&:hover,
+		&:focus {
+			box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+		}
+		&:active {
+			box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
+		}
+	}
+	
 
 
 /* Ghost buttons
-   ========================================================================== */
+	========================================================================== */
 
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
@@ -151,44 +203,44 @@ $btn-ghost-border-width: 2px;
   &:hover,
   &:active,
   &:focus {
-    background: none;
+	 background: none;
   }
 
   &.c-btn--small {
-    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+	 padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
   }
 
   &.c-btn--large {
-    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+	 padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
   }
 
   &.c-btn--primary {
-    color: #4a8ec2;
+	 color: #4a8ec2;
 
-    &:hover,
-    &:focus {
-      color: #3774a2;
-    }
+	 &:hover,
+	 &:focus {
+		color: #3774a2;
+	 }
 
   }
 
   &.c-btn--secondary {
-    color: #2f4054;
+	 color: #2f4054;
 
-    &:hover,
-    &:focus {
-      color: #1d2733;
-    }
+	 &:hover,
+	 &:focus {
+		color: #1d2733;
+	 }
 
   }
 
   &.c-btn--tertiary {
-    color: #fff;
+	 color: #fff;
 
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
+	 &:hover,
+	 &:focus {
+		color: #fff;
+	 }
 
   }
 

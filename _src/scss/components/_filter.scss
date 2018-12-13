@@ -1,0 +1,52 @@
+// =====================================
+// c-filter
+// =====================================
+
+
+.c-filter {
+	margin-bottom: $spacing-unit-large;
+}
+
+.c-filter__header {
+	
+}
+
+.c-filter__container {
+	border-top: 1px solid $color-black;
+}
+
+.c-filter__list {
+	padding-top: $spacing-unit;
+	margin-bottom: 0;
+	
+	&--selection {
+		border-top: 1px solid $color-black;
+		padding-bottom: $spacing-unit;
+	}
+}
+
+.c-filter__list-item {
+	display: inline-block;
+	white-space: nowrap;
+	margin-bottom: $spacing-unit-small;
+}
+
+.c-filter__tag {
+	margin: 0 ($spacing-unit-tiny / 2);
+	padding: $spacing-unit-tiny $spacing-unit-small $spacing-unit-tiny/2;
+	border: 1px solid $color-grey-200;
+	border-radius: 3px;
+	background-color: transparent;
+	color: $color-black;
+	@include font-size(18px);
+	transition: background .3s ease, border .3s ease;
+	
+	&:hover {
+		background: $color-informer;
+		border-color: $color-informer;
+	}
+	
+	&--select {
+		border-color: $color-informer;
+	}
+}

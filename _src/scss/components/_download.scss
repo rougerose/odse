@@ -1,0 +1,28 @@
+// =====================================
+// c-download
+// =====================================
+
+
+.c-download {}
+
+.c-download__text {
+	margin-bottom: 0;
+	color: $color-black;
+}
+
+.c-download__title {
+	@include font-size(16px);
+}
+
+.c-download__desc {}
+
+.c-download__infos {
+	margin-top: $spacing-unit-tiny;
+	color: $color-grey-500;
+	@include font-size(15px);
+	transition: color .3s ease;
+	
+	.c-article-download__link:hover & {
+		color: darken($color-informer, 25%);
+	}
+}

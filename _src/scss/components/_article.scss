@@ -1,0 +1,144 @@
+.c-article {
+	
+}
+
+.c-article__container {
+	margin: 0 auto;
+	max-width: 700px;
+	width: 100%;
+}
+
+.c-article__meta {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: $spacing-unit;
+	line-height: 19px;
+	
+	@include mq(lg) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+}
+
+.c-article__date {
+	color: $color-grey-500;
+	@include font-size(18px, false);
+	
+	@include mq(lg) {
+		flex: 0 1 30%;
+		padding-bottom: $spacing-unit-tiny;
+	}
+}
+
+.c-article__message-peremption {
+	
+	@include mq(lg) {
+		flex: 0 1 68%;
+		// padding-bottom: $spacing-unit-tiny;
+	}
+}
+
+.c-article__header {
+	margin-bottom: $spacing-unit-large;
+}
+
+
+.c-article__title {
+	@include font-size(32px, 1.2);
+}
+
+
+.c-article__texte {
+	@include font-size(18px);
+	
+	&--chapo {
+		margin-bottom: $spacing-unit-large;
+		@include font-size(22px);
+	}
+	
+	h3 {
+		margin-top: $spacing-unit-large;
+		margin-bottom: $spacing-unit-small;
+		font-family: $font-C;
+		@include font-size(28px, 1.2);
+		font-weight: normal;
+		color: darken($color-odse, 5%);
+	}
+}
+
+
+.c-article-footer {}
+
+.c-article-footer__title {
+	margin-top: $spacing-unit-small;
+	@include font-size(20px);
+	text-transform: uppercase;
+}
+
+.c-article-footer__article-content {
+	margin-top: $spacing-unit-large;
+	
+	.c-article-footer__title {
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit-small;
+		@include font-size(15px);
+	}
+	
+	section {
+		border-top: 1px solid $color-grey-300;
+	}
+	
+	p {
+		line-height: 1.3;
+	}
+}
+
+	.c-article-footer__downloads {}
+
+	.c-article__footnotes {}
+
+	.c-article__tags {}
+
+.c-article-footer__related {
+	margin-top: $spacing-unit;
+	margin-bottom: $spacing-unit-large;
+	padding-top: $spacing-unit;
+	border-top: 1px solid $color-grey-300;
+}
+
+.c-article-footer__downloads {
+	margin-bottom: $spacing-unit-large;
+}
+
+
+.c-article-download {
+	margin: $spacing-unit-small;
+}
+
+.c-article-download__link {
+	border: 1px solid $color-grey-300;
+	border-radius: 4px;
+	padding: $spacing-unit-small;
+	transition: all .3s ease;
+	
+	&:hover {
+		background-color: $color-informer;
+		border-color: $color-informer;
+	}
+}
+
+.c-article-download__img {
+	> img {
+		border-right: 1px dotted $color-grey-400;
+		padding: $spacing-unit;
+		transition: all .3s ease;
+		
+		.c-article-download__link:hover & {
+			border-right-color: darken($color-informer, 25%);
+			mix-blend-mode: multiply;
+		}
+	}
+}
+
+.c-article-download__body {}

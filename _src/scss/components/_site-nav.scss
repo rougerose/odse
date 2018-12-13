@@ -143,26 +143,26 @@ $mq-site-nav: 900px;
 			font-weight: bold;
 			text-transform: uppercase;
 			
-			&::before {
-				display: block;
-				height: 12px;
-				width: 12px;
-				position: absolute;
-				left: ($spacing-unit + $spacing-unit-tiny) / 2;
-				background-color: red;
-				content: '';
-				border-radius: 50%;
+			> .o-icon--dot {
+				width: 16px;
+				height: 16px;
+				margin-right: 3px;
+				padding-top: 3px;
+			}
+			
+			> span {
+				display: inline-block;
 			}
 			
 			@include mq($until: $mq-site-nav) {
 				@include font-size(20px, 1);
 				transition: all .2s ease;
-				padding: $spacing-unit-small ($spacing-unit + $spacing-unit-small);
+				padding: $spacing-unit-small ;
 				color: $color-white;
+				
+				> .o-icon--dot {
+					width: 20px;
+					height: 20px;
+				}
 			}
-			
-			&--infos::before {background-color: $color-informer;}
-			&--actions::before {background-color: $color-actions;}
-			&--odse::before {background-color: $color-odse;}
-			&--recherche::before {background-color: $color-recherche;}
 		}

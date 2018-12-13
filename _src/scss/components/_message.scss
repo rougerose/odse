@@ -1,0 +1,33 @@
+
+
+.c-message {
+	padding: $spacing-unit-tiny; 
+	font-family: $font-CG;
+	@include font-size(14px, false);
+	
+	> span {
+		display: block;
+	}
+	
+	&--alert {
+		background-color: $color-red-50;
+		border: 4px solid $color-red-800;
+		border-width: 0 0 0 4px;
+	}
+}
+
+.c-message__title {
+	font-weight: bold;
+	margin-bottom: $spacing-unit-tiny / 2;
+	
+	.c-message--alert & {
+		color: $color-red-800;
+	}
+}
+
+.c-message__text {
+	
+	.c-message--alert & {
+		color: $color-black;
+	}
+}
