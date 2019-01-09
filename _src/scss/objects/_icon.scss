@@ -88,11 +88,17 @@ $transition-function-icon-burger: cubic-bezier(0.215, 0.61, 0.355, 1);
 	&-informer {
 		fill: $color-informer;
 	}
+	
 	&-actions {
 		fill: $color-actions;
 	}
+	
 	&-odse {
 		fill: $color-odse;
+	}
+	
+	&-actualites {
+		fill: $color-actualites;
 	}
 }
 

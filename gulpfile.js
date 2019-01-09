@@ -131,7 +131,7 @@ gulp.task('watch', function () {
 	gulp.watch([options.scss.files], ['compile:scss', 'jekyll-rebuild'])
 	gulp.watch([options.css.file], ['compile:css', 'jekyll-rebuild'])
 	gulp.watch(['_src/js/*.js'], ['compile:js', 'minify:js', 'jekyll-rebuild'])
-	gulp.watch(['./*.html', 'informer/*.html', '_layouts/*.html', '_includes/*.html', '_config.yml'], ['jekyll-rebuild'])
+	gulp.watch(['./*.html', 'informer/*.html', 'actualites/*.html', '_layouts/*.html', '_includes/*.html', '_config.yml'], ['jekyll-rebuild'])
 })
 
 /**

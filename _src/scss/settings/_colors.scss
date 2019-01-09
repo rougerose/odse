@@ -28,7 +28,16 @@ $color-grey-200: hsl(0,0%,93%);
 $color-grey-300: hsl(0,0%,88%);
 $color-grey-400: hsl(0,0%,74%);
 $color-grey-500: hsl(0,0%,62%);
+$color-grey-600: hsl(0,0%,46%);
+$color-grey-700: hsl(0,0%,38%);
+$color-grey-800: hsl(0,0%,26%);
+$color-grey-900: hsl(0,0%,13%);
 
+
+$color-olive-800: hsl(76,60%,15%);
+$color-olive-700: hsl(76,60%,35%);
+$color-olive-500: hsl(76,60%,50%);
+$color-olive-400: hsl(76,60%,60%);
 
 //
 // Couleurs identitaires ODSE
@@ -37,3 +46,4 @@ $color-odse:      $color-purple-700;
 $color-informer:  $color-orange;
 $color-actions:   $color-red-orange;
 $color-recherche: $color-green;
+$color-actualites: $color-olive-700;
