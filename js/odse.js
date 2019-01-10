@@ -67,5 +67,5 @@ var toggleFilter = (function(){
 })();
 
 $(function() {
-	toggleFilter.init();
+	//toggleFilter.init();
 });

@@ -3,7 +3,7 @@
 // =====================================
 
 .c-article-actu {
-	border: 1px solid $color-olive-400;
+	border: 1px solid $color-actualites;
 	border-width: 1px 0 0;
 	
 	&--preview {
@@ -110,7 +110,7 @@
 	}
 	
 	.c-article-actu__lien {
-		border-bottom: 1px dotted currentColor;
+		border-bottom: 1px solid currentColor;
 		font-family: $font-monospace;
 		color: $color-grey-600;
 		@include font-size(14px);

@@ -39,6 +39,9 @@ $color-olive-600: hsl(76,60%,40%);
 $color-olive-500: hsl(76,60%,50%);
 $color-olive-400: hsl(76,60%,60%);
 
+$color-caribbean-green-400: hsl(169, 91%, 42%);
+$color-caribbean-green-500: hsl(169, 91%, 50%);
+
 //
 // Couleurs identitaires ODSE
 // -------------------------------------
@@ -46,4 +49,4 @@ $color-odse:      $color-purple-700;
 $color-informer:  $color-orange;
 $color-actions:   $color-red-orange;
 $color-recherche: $color-green;
-$color-actualites: $color-olive-700;
+$color-actualites: $color-caribbean-green-400;
