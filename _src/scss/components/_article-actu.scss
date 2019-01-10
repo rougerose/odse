@@ -1,0 +1,124 @@
+// =====================================
+// c-article-actu
+// =====================================
+
+.c-article-actu {
+	border: 1px solid $color-actualites;
+	border-width: 1px 0 0;
+	
+	&--preview {
+		padding: $spacing-unit-small 0;
+		
+		&:last-child {
+			border-bottom-width: 1px;
+		}
+	}
+	
+	&--full {
+		display: flex;
+		flex-direction: column;
+
+		padding: $spacing-unit-large $spacing-unit;
+		
+		@include mq(md) {
+			flex-direction: row;
+		}
+	}
+}
+
+
+.c-article-actu__media {
+	@include mq(md) {
+		width: (4/12)*100%;
+		margin-bottom: 0;
+	}
+}
+
+.c-article-actu__body {
+	@include mq(md) {
+		padding-left: $spacing-unit;
+		width: (8/12)*100%;
+		
+		&--no-media {
+			margin-left: (4/12)*100%;
+		}
+	}
+	
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.c-article-actu__title {
+	&--preview {
+		margin-bottom: 0;
+		font-family: $font-C;
+		@include font-size(20px);
+		font-weight: normal;
+		
+		.c-article-actu__date,
+		.c-article-actu__site {
+			color: $color-grey-600;
+			
+			&::before {
+				color: $color-grey-300;
+				content: ' :: ';
+			}
+		}
+		
+		.c-article-actu__site {
+			&::after {
+				color: $color-grey-300;
+				content: ' :: ';
+			}
+			
+		}
+		
+		.c-article-actu__lien {
+			border-bottom: 1px solid currentColor;
+			color: $color-black;
+			font-family: $font-CG;
+			font-weight: bold;
+			transition: all .3s ease;
+			
+			&:hover {
+				color: $color-actualites;
+			}
+		}
+	}
+}
+
+.c-article-actu__source {
+	@include font-size(16px);
+	color: $color-grey-600;
+	
+	&::before {
+		color: $color-grey-300;
+		content: ' :: ';
+	}
+	
+	.c-article-actu__date,
+	.c-article-actu__site {
+		color: $color-grey-600;
+		
+		&::after {
+			color: $color-grey-300;
+			content: ' :: ';
+		}
+	}
+	
+	.c-article-actu__lien {
+		border-bottom: 1px solid currentColor;
+		font-family: $font-monospace;
+		color: $color-grey-600;
+		@include font-size(14px);
+		transition: all .3s ease;
+		
+		&:hover {
+			border-bottom-style: solid;
+			color: $color-actualites;
+		}
+	}
+}

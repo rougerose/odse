@@ -3,31 +3,47 @@
 // =====================================
 
 .c-article-preview {
-	margin-top: $spacing-unit-large;
+	margin-bottom: $spacing-unit-large;
+	padding: $spacing-unit;
+	transition: background .3s ease;
 	
-	&--first {
-		margin-top: $spacing-unit;
+	&:hover {
+		background-color: $color-olive-600;
 	}
 	
-	&--footer {
-		margin-top: 0;
+	@include mq(md) {
+		display: flex;
+		flex-direction: column;
+		
+		position: relative;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 1px;
+			height: 100%;
+			right: 0;
+			background: $color-grey-200;
+			top: 0;
+		}
 	}
 }
 
 	// ----- c-article-preview__link ----- //
 	.c-article-preview__link {
 		display: block;
-		padding: $spacing-unit-small;
+		// padding: $spacing-unit-small;
 		color: $color-black;
-		transition: background .3s ease;
 		
-		&--category-infos:hover {
-			background-color: $color-informer;
-		}
 		
-		&--category-actions:hover {
-			background-color: $color-actions;
-		}
+		// &--category-infos:hover {
+		// 	background-color: $color-informer;
+		// }
+		// 
+		// &--category-actions:hover {
+		// 	background-color: $color-actions;
+		// }
 	}
 	
 	
@@ -36,28 +52,33 @@
 		display: flex;
 		flex-direction: column;
 		
-		@include mq(md) {
-			flex-direction: row;
-		}
+		// @include mq(md) {
+		// 	flex-direction: row;
+		// }
 	}
 	
 		// ----- c-article-preview__media-img ----- //
 		.c-article-preview__media-img {
+			margin-top: $spacing-unit;
 			
 			@include mq(md) {
-				width: (4 / 12) * 100%;
-				margin-bottom: 0;
-				margin-right: $spacing-unit;
+				// margin-right: (1/3)*100%;
 			}
+			
+			// @include mq(md) {
+			// 	width: (4 / 12) * 100%;
+			// 	margin-bottom: 0;
+			// 	margin-right: $spacing-unit;
+			// }
 		}
 		
 		// ----- c-article-preview__media-body ----- //
 		.c-article-preview__media-body {
 			
-			@include mq(md) {
-				width: (6 / 12) * 100%;
-				margin-right: auto; // pull-right
-			}
+			// @include mq(md) {
+			// 	width: (6 / 12) * 100%;
+			// 	margin-right: auto; // pull-right
+			// }
 		}
 	
 	// ----- c-article-preview__media--reverse ----- //
@@ -80,15 +101,15 @@
 	
 	// ----- c-article-preview__block ----- //
 	.c-article-preview__block {
-		display: flex;
-		flex-direction: column;
-		
-		&--reverse {
-			> .c-article-preview__block-img {
-				order: 1;
-				margin-top: $spacing-unit;
-			}
-		}
+		// display: flex;
+		// flex-direction: column;
+		// 
+		// &--reverse {
+		// 	> .c-article-preview__block-img {
+		// 		order: 1;
+		// 		margin-top: $spacing-unit;
+		// 	}
+		// }
 	}
 	
 	
