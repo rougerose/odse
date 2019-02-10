@@ -34,18 +34,24 @@ $mq-site-nav: 900px;
   // -------------------------------------
 
   .c-sn__logo-home {
-    display: flex;
-    height: 50px;
+    margin: 0 auto;
 
     @include mq($mq-site-nav) {
-      height: auto;
+      display: block;
+      margin: 0;
       padding-right: $spacing-unit;
-      max-width: 254px;
+      line-height: 1;
     }
   }
 
     .c-sn__logo {
       fill: $color-odse;
+      width: 100%;
+      max-width: 180px;
+
+      @include mq($mq-site-nav){
+        max-width: 250px;
+      }
     }
 
 
