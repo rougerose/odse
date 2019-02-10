@@ -11,4 +11,9 @@
   <licence>GPL v3</licence>
   <necessite nom="odse_squelettes" compatibilite="[1.0.0;]" />
   <chemin path="" />
+  <spip compatibilite="[3.2.0;3.2.*]">
+    <style type="public" source="css/odse.css" />
+    <script type="public" source="javascript/lib.js" />
+    <script type="public" source="javascript/odse.min.js" />
+  </spip>
 </paquet>

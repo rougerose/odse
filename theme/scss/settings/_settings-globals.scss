@@ -1,0 +1,41 @@
+// =====================================
+// settings: globals
+// =====================================
+
+//
+// inuitcss
+// -------------------------------------
+$global-radius: 4px !default;
+$global-transition: all .3s ease-in-out !default;
+$inuit-fractions: 1 2 3 4 5 6 !default;
+$inuit-wrapper-width: 1200px;
+
+//
+// mediaqueries
+// -------------------------------------
+$mq-breakpoints: (
+  xs: 320px, // 20em
+  s: 439px, // 27.43em
+  m: 640px, // 40em
+  l: 768px, // 48em
+  xl: 1024px,
+  xxl: 1200px
+);
+
+
+//
+// ODSE
+// -------------------------------------
+
+  // ----- font ----- //
+  $font-text: 'texgyreschola';
+  $font-heading: 'texgyreadventor';
+  $font-monospace: monospace;
+
+  // ----- transitions ----- //
+  $transition-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  // ----- z-index ----- //
+  $zindex-dialog-overlay: 10;
+  $zindex-site-nav: 10;
+  $zindex-spip-admin-float: 100;

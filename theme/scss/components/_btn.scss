@@ -1,0 +1,179 @@
+/* ==========================================================================
+  #BUTTONS
+  ========================================================================== */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  transition: $global-transition;
+  border-radius: $global-radius;
+}
+
+
+// =====================================
+// Variantes
+// =====================================
+
+  //
+  // c-btn--primary
+  // -------------------------------------
+
+  .c-btn--primary {
+    background-color: #4a8ec2;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none; /* [4] */
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #3774a2;
+    }
+  }
+
+
+  //
+  // c-btn--secondary
+  // -------------------------------------
+
+  .c-btn--secondary {
+    background-color: #2f4054;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+     text-decoration: none;
+     color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+     background-color: #1d2733;
+    }
+  }
+
+
+  //
+  // c-btn--tertiary
+  // -------------------------------------
+
+  .c-btn--tertiary {
+    background-color: #fff;
+    color: #4a8ec2;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+     text-decoration: none;
+     color: #4a8ec2;
+    }
+
+    &:hover,
+    &:focus {
+     color: #3774a2;
+    }
+  }
+
+
+  //
+  // c-btn--small
+  // -------------------------------------
+
+  .c-btn--small {
+    padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+  }
+
+
+  //
+  // c-btn--large
+  // -------------------------------------
+
+  .c-btn--large {
+    padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+  }
+
+
+  //
+  // c-btn--burger
+  // -------------------------------------
+
+  .c-btn--burger {
+    position: relative;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+  }
+
+
+  //
+  // c-btn-search
+  // -------------------------------------
+  .c-btn--search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    transition: background-color .5s ease;
+  }
+
+
+  //
+  // c-btn--flat
+  // -------------------------------------
+  .c-btn--flat {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+
+  //
+  // c-btn-close
+  // -------------------------------------
+  .c-btn--close {
+    position: absolute;
+    top: $spacing-unit;
+    right: $spacing-unit;
+    height: 32px;
+    width: 32px;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $color-red-700;
+      height: .25rem;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }

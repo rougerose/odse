@@ -1,0 +1,136 @@
+// =====================================
+// o-icon
+// =====================================
+
+//
+// variables
+// -------------------------------------
+$size-std: 32px;
+
+
+.o-icon {
+  height: $size-std;
+  width: $size-std;
+}
+
+// =====================================
+// variantes
+// =====================================
+
+//
+// o-icon--dot
+// -------------------------------------
+
+.o-icon--dot {}
+
+
+//
+// o-icon--menu
+// -------------------------------------
+
+.o-icon--menu {
+  align-self: flex-end;
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+  // padding-top: 3px;
+}
+
+.o-icon--menu-mobile {
+  height: 18px;
+  width: 18px;
+  margin-right: 6px;
+}
+
+
+//
+// o-icon--menu-itemX
+// -------------------------------------
+$itemIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $color-actualites) !default;
+
+@each $ID, $color  in $itemIDs {
+  .o-icon--menu-item#{$ID} {
+    fill: $color;
+  }
+}
+
+
+//
+// o-icon--burger
+// -------------------------------------
+
+$transition-function-icon-burger: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.o-icon--burger {
+  display: block;
+  top: 50%;
+  margin-top: -1px;
+  transition-duration: 0.075s;
+  transition-timing-function: $transition-function;
+
+  &,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: .25rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    content: '';
+    background-color: $color-black;
+    transition: transform .15s ease;
+  }
+
+  &::before {
+    top: -0.5rem;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  }
+
+  &::after {
+    bottom: -0.5rem;
+    transition: bottom 0.075s 0.12s ease, transform 0.075s $transition-function;
+  }
+
+  .is-open & {
+    background-color: $color-red-700;
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: $transition-function-icon-burger;
+
+    &::before {
+      top: 0;
+      opacity: 0;
+      background-color: $color-red-700;
+      transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    }
+
+    &::after {
+      bottom: 0;
+      background-color: $color-red-700;
+      transform: rotate(-90deg);
+      transition: bottom 0.075s ease, transform 0.075s 0.12s $transition-function-icon-burger;
+    }
+  }
+}
+
+
+//
+// o-icon--search
+// -------------------------------------
+
+.o-icon--search {
+  height: 24px;
+  width: 24px;
+}
+
+.o-icon--search-mobile {
+  fill: $color-grey-500;
+  transition: all .5s ease;
+
+  &:hover {
+    fill: $color-white;
+    background-color: $color-odse;
+  }
+}

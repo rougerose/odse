@@ -1,0 +1,79 @@
+// =====================================
+// c-site
+// =====================================
+
+
+//
+// c-site
+// -------------------------------------
+
+.c-site {
+  font-family: $font-text;
+
+  // &.js-overlay-is-visible {
+  //   overflow: hidden;
+  //   height: 100vh;
+  // }
+}
+
+
+  //
+  // c-site__header
+  // -------------------------------------
+
+  .c-site-page__header {}
+
+
+    //
+    // c-site__title
+    // -------------------------------------
+
+    .c-site__title {
+      position: relative;
+      color: $color-odse;
+      font-family: $font-heading;
+      @include font-size(18px, 1.2);
+      font-weight: normal;
+      text-align: center;
+      text-transform: uppercase;
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        z-index: $zindex-site-nav - 2;
+        height: 1px;
+        width: 50%;
+        background-color: $color-odse;
+        content: '';
+      }
+
+      &::before {left: 0;}
+      &::after {right: 0;}
+
+      > span {
+        display: inline-block;
+        position: relative;
+        z-index: $zindex-site-nav - 1;
+        margin: $spacing-unit;
+        padding: 0 $spacing-unit;
+        background-color: $color-white;
+
+        @include mq(500px) {
+          margin: $spacing-unit 0;
+        }
+      }
+    }
+
+
+  //
+  // c-site__main
+  // -------------------------------------
+
+  .c-site__main {
+
+    &[aria-hidden="true"] {
+      overflow: hidden;
+    }
+  }
