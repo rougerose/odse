@@ -1,32 +1,3 @@
-var searchBoxToggle = (function(){
-  var self = {},
-      $body = undefined,
-      $overlay = undefined,
-      $searchToggle = undefined,
-      $closeBtn = undefined;
-
-  self.init = function() {
-    $body = $("body");
-    $overlay = $(".c-sn__overlay--searchbox");
-    $searchToggle = $(".js-search-box-toggle");
-    $closeBtn = $(".js-btn-close");
-    self.bindActions();
-  };
-
-  self.bindActions = function() {
-    $searchToggle.on("click", function() {
-      $body.addClass("js-overlay-is-visible");
-      $overlay.addClass("is-visible");
-    });
-    $closeBtn.on("click", function() {
-      $body.removeClass("js-overlay-is-visible");
-      $overlay.removeClass("is-visible");
-    });
-  };
-
-  return self;
-})();
-
 var searchForm = (function() {
   var self = {},
       $searchbox = undefined;
@@ -41,29 +12,6 @@ var searchForm = (function() {
   self.bindActions = function() {
     $searchInput.on('focusout', function() {
       '' !== $(this).val() ? $(this).addClass('is-filled') : $(this).removeClass('is-filled');
-    });
-  };
-
-  return self;
-})();
-
-var toggleSiteNav = (function(){
-  var self = {},
-      $body = undefined,
-      $siteNav = undefined,
-      $navToggle = undefined;
-
-  self.init = function() {
-    $body = $("body");
-    $siteNav = $(".js-site-nav");
-    $navToggle = $(".js-site-nav-toggle");
-    self.bindActions();
-  };
-
-  self.bindActions = function() {
-    $navToggle.on("click", function() {
-      $body.toggleClass("js-overlay-is-visible");
-      $siteNav.toggleClass("is-open");
     });
   };
 

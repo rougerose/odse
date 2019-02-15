@@ -1,0 +1,28 @@
+// =====================================
+// c-tag-list
+// =====================================
+
+.c-tag-list {}
+
+
+//
+// c-tag__item
+// -------------------------------------
+
+.c-tag-list__item {
+  border: 1px solid $color-grey-300;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: $spacing-unit-tiny;
+  margin-bottom: $spacing-unit-tiny;
+  padding: 0 $spacing-unit-tiny;
+  white-space: nowrap;
+  transition: all .5s ease;
+}
+
+a.c-tag-list__item {
+  &:hover {
+    background-color: $color-link-text;
+    border-color: $color-link-text;
+  }
+}

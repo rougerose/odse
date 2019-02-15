@@ -1,0 +1,134 @@
+// =====================================
+// c-article-resume
+// =====================================
+
+
+.c-article-resume {
+  position: relative;
+  margin-bottom: $spacing-unit;
+
+  @include mq(m) {
+    margin-left: $spacing-unit * -1;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: $color-grey-300;
+      content: '';
+    }
+  }
+}
+
+
+  //
+  // c-article-resume__link
+  // -------------------------------------
+
+  .c-article-resume__link {
+    display: block;
+    padding: $spacing-unit;
+    transition: background-color .5s ease;
+
+    &:hover {
+      background-color: $color-link-text;
+    }
+  }
+
+
+    //
+    // c-article-resume__header
+    // -------------------------------------
+
+    .c-article-resume__header {
+      margin-bottom: $spacing-unit-small;
+      line-height: 1.2;
+    }
+
+
+      //
+      // c-article-resume__titre
+      // -------------------------------------
+
+      .c-article-resume__titre {
+        margin-bottom: 0;
+        @include font-size(20px, false);
+        font-weight: bold;
+      }
+
+
+      //
+      // c-article-resume__surtitre
+      // -------------------------------------
+
+      .c-article-resume__surtitre {
+        margin-bottom: $spacing-unit-tiny;
+        @include font-size(16px, false);
+        font-style: italic;
+      }
+
+
+      //
+      // c-article-resume__soustitre
+      // -------------------------------------
+
+      .c-article-resume__soustitre {
+        margin-bottom: 0;
+        margin-top: $spacing-unit-tiny;
+        @include font-size(16px, false);
+        font-style: italic;
+      }
+
+
+    //
+    // c-article-resume__texte
+    // -------------------------------------
+
+    .c-article-resume__texte {
+
+    }
+
+
+      //
+      // c-article-resume__desc
+      // -------------------------------------
+
+      .c-article-resume__desc {
+        @include font-size(16px);
+      }
+
+
+      //
+      // c-article-resume__meta
+      // -------------------------------------
+
+      .c-article-resume__meta {
+        color: $color-grey-500;
+        @include font-size(14px);
+        transition: color .5s ease;
+
+        .c-article-resume:hover & {
+          color: $color-grey-700;
+        }
+      }
+
+
+        //
+        // c-article-resume__date
+        // -------------------------------------
+
+        .c-article-resume__date {}
+
+
+        //
+        // c-article-resume__tags
+        // -------------------------------------
+
+        .c-article-resume__tags {
+          .c-article-resume:hover & .c-tag-list__item {
+            border-color: $color-grey-600;
+          }
+        }

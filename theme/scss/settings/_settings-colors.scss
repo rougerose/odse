@@ -20,11 +20,29 @@ $color-red-700: hsl(0, 65%, 51%);
 $color-red-800: #c62828;
 $color-red-900: #b71c1c;
 
-$color-purple-900: hsl(299,100%,5%);
-$color-purple-800: hsl(299,100%,10%);
-$color-purple-700: hsl(299,100%,25%);
-$color-purple-500: hsl(299,100%,50%);
+$color-orange-100: hsl(36,100%,85%);
+$color-orange-200: hsl(36,100%,75%);
+$color-orange-300: hsl(36,100%,65%);
+$color-orange-400: hsl(36,100%,57%);
+$color-orange-500: hsl(36,100%,50%);
+$color-orange-600: hsl(33,100%,49%);
+$color-orange-700: hsl(30,100%,48%);
+$color-orange-800: hsl(27,100%,47%);
+$color-orange-900: hsl(21,100%,45%);
 
+$color-purple-50: hsl(296,35%,91%);
+$color-purple-100: hsl(298,33%,78%);
+$color-purple-200: hsl(298,34%,63%);
+$color-purple-300: hsl(299,37%,48%);
+$color-purple-400: hsl(299,59%,36%);
+$color-purple-500: hsl(299,100%,25%);
+$color-purple-600: hsl(299,100%,24%);
+$color-purple-700: hsl(299,100%,21%);
+$color-purple-800: hsl(298,100%,19%);
+$color-purple-900: hsl(298,100%,16%);
+
+$color-grey-50: hsl(0,0%,98%);
+$color-grey-100: hsl(0,0%,96%);
 $color-grey-200: hsl(0,0%,93%);
 $color-grey-300: hsl(0,0%,88%);
 $color-grey-400: hsl(0,0%,74%);
@@ -46,11 +64,23 @@ $color-caribbean-green-500: hsl(169, 91%, 50%);
 //
 // Couleurs identitaires ODSE
 // -------------------------------------
-$color-odse:      $color-purple-700;
+$color-odse:      $color-purple-500;
 $color-informer:  $color-orange;
 $color-actions:   $color-red-orange;
 $color-recherche: $color-green;
 $color-actualites: $color-caribbean-green-400;
 
+// Liens
+$color-link-text: $color-purple-100;
+
+//
+// Overlay
+// -------------------------------------
 $color-dialog-overlay-default: rgba(255,255,255, 0.95);
 $color-dialog-overlay-site-nav: rgba(0,0,0, 0.95);
+
+//
+// Messages
+// -------------------------------------
+$color-bg-message-info: $color-orange-100;
+$color-message-info: $color-orange-600;

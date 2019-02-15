@@ -1,0 +1,11 @@
+// =====================================
+// t-color
+// =====================================
+
+$secteurIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $color-actualites) !default;
+
+@each $ID, $color  in $secteurIDs {
+  .t-color-#{$ID} {
+    color: $color;
+  }
+}

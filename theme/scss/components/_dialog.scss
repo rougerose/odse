@@ -19,7 +19,7 @@
 
   &:not([aria-hidden="true"]) {
     > .c-dialog__overlay {
-      animation: fade-in .2s 1 both;
+      animation: fade-in .5s 1 both;
     }
   }
 }
