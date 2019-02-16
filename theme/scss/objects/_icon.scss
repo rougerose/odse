@@ -43,12 +43,12 @@ $size-std: 32px;
 
 
 //
-// o-icon--menu-itemX
+// o-icon--rubriqueX
 // -------------------------------------
 $itemIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $color-actualites) !default;
 
 @each $ID, $color  in $itemIDs {
-  .o-icon--menu-item#{$ID} {
+  .o-icon--rubrique#{$ID} {
     fill: $color;
   }
 }
