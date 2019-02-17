@@ -7,7 +7,7 @@
         <aside class="c-article__meta">
           <p class="c-article__date"><time datetime="[(#DATE|date_iso)]" itemprop="datePublished">[(#DATE|affdate)]</time></p>
           <BOUCLE_test_peremption(CONDITION){si #DATE|odse_squelettes_verifier_peremption_article}>
-            <INCLURE{fond=inclure/article_message_peremption, id_article} />
+            <INCLURE{fond=inclure/message_peremption_article, id_article} />
           </BOUCLE_test_peremption>
         </aside>
 
@@ -16,7 +16,7 @@
           <h1 class="c-article__titre" itemprop="name headline">#TITRE</h1>
           [<p class="c-article__soustitre t-color-#ID_SECTEUR">(#SOUSTITRE)</p>]
           <BOUCLE_auteur(AUTEURS){id_article}{0,1}>
-          [<p class="c-article__auteurs c-spip-text u-hr u-hr--both">(#INCLURE{fond=inclure/article_auteurs, id_article})</p>]
+          [<p class="c-article__auteurs c-spip-text u-hr u-hr--both">(#INCLURE{fond=inclure/auteurs_article, id_article})</p>]
           </BOUCLE_auteur>
         </header>
 
@@ -37,7 +37,7 @@
         </div>]
 
         <footer class="c-article__footer c-af">
-          <INCLURE{fond=inclure/article_documents, id_article} />
+          <INCLURE{fond=inclure/documents_article, id_article} />
 
           <div class="o-grid">
             [<div class="o-grid__cell u-1/2@m">
