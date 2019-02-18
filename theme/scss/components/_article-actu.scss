@@ -1,0 +1,116 @@
+// =====================================
+// c-article-actu
+// =====================================
+
+
+.c-article-actu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-black;
+  border-width: 1px 0 0;
+  padding: $spacing-unit-large $spacing-unit-small;
+
+  &:last-of-type {
+    border-bottom-width: 1px;
+  }
+
+  @include mq(m) {
+    flex-direction: row;
+  }
+}
+
+
+  //
+  // c-article-actu__image
+  // -------------------------------------
+
+  .c-article-actu__image {
+
+    @include mq(m) {
+      width: (4/12)*100%;
+      margin-bottom: 0;
+    }
+  }
+
+
+  //
+  // c-article-actu__body
+  // -------------------------------------
+
+  .c-article-actu__body {
+    @include mq(m) {
+      width: (8/12)*100%;
+      padding-left: $spacing-unit;
+
+      &--no-image {
+        margin-left: (4/12)*100%;
+      }
+    }
+  }
+
+
+    //
+    // c-article-actu__header
+    // -------------------------------------
+
+    .c-article-actu__header {}
+
+
+      //
+      // c-article-actu__title
+      // -------------------------------------
+
+      .c-article-actu__title {
+        @include font-size(20px, 1.2);
+        font-weight: bold;
+      }
+
+
+    //
+    // c-article-actu__desc
+    // -------------------------------------
+
+    .c-article-actu__desc {
+      @include font-size(18px);
+    }
+
+
+    //
+    // c-article-actu__source
+    // -------------------------------------
+
+    .c-article-actu__source {
+      @include font-size(16px);
+      color: $color-grey-600;
+    }
+
+
+      //
+      // c-article-actu__date
+      // -------------------------------------
+
+      .c-article-actu__date {
+        &::after {
+          color: $color-grey-300;
+          content: ' | ';
+        }
+      }
+
+
+      //
+      // c-article-actu__site
+      // -------------------------------------
+
+      .c-article-actu__site {
+        &::after {
+          color: $color-grey-300;
+          content: ' :: ';
+        }
+      }
+
+
+      //
+      // c-article-actu__lien
+      // -------------------------------------
+
+      .c-article-actu__lien {}

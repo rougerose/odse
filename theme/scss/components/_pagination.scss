@@ -1,0 +1,19 @@
+// =====================================
+// c-pagination
+// =====================================
+
+
+.c-pagination {
+  padding: $spacing-unit 0;
+  text-align: center;
+
+  .label {
+    display: inline-block;
+    margin-right: $spacing-unit-tiny;
+  }
+
+  .tbc,
+  .sep {
+    color: $color-grey-400;
+  }
+}

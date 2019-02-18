@@ -3,7 +3,8 @@
 // =====================================
 
 
-a[class*="spip_"] {
+a[class*="spip_"],
+a.lien_pagination {
   border-bottom: 1px solid $color-link-text;
   box-shadow: inset 0 -3px $color-link-text;
   background-color: transparent;

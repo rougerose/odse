@@ -13,9 +13,12 @@ $size-std: 32px;
   width: $size-std;
 }
 
+
+
 // =====================================
 // variantes
 // =====================================
+
 
 //
 // o-icon--dot
@@ -40,6 +43,19 @@ $size-std: 32px;
   width: 18px;
   margin-right: 6px;
 }
+
+
+//
+// o-icon--titre-rubrique
+// -------------------------------------
+
+.o-icon--titre-rubrique {
+  align-self: flex-end;
+  margin-right: 6px;
+  height: 24px;
+  width: 24px;
+}
+
 
 
 //

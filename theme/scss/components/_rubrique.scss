@@ -1,0 +1,37 @@
+// =====================================
+// c-rubrique
+// =====================================
+
+
+.c-rubrique {}
+
+
+  //
+  // c-rubrique__header
+  // -------------------------------------
+
+  .c-rubrique__header {
+    margin-bottom: $spacing-unit-large;
+  }
+
+
+    //
+    // c-rubrique__title
+    // -------------------------------------
+
+    .c-rubrique__title {
+      display: flex;
+      @include font-size(28px, 1);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+
+    //
+    // c-rubrique__desc
+    // -------------------------------------
+
+    .c-rubrique__desc {
+      margin-bottom: $spacing-unit-large;
+      @include font-size(20px);
+    }

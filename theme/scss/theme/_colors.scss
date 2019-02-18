@@ -8,4 +8,8 @@ $secteurIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $
   .t-color-#{$ID} {
     color: $color;
   }
+
+  .t-brcolor-#{$ID} {
+    border-color: $color;
+  }
 }
