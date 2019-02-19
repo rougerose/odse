@@ -1,7 +1,7 @@
 <paquet
   prefix="odse_squelettes"
   categorie="squelette"
-  version="1.0.0"
+  version="1.1.0"
   etat="dev"
   compatibilite="[3.2.3;3.2.*]"
   logo="prive/themes/spip/images/ODSE-128.png"
@@ -9,10 +9,13 @@
   <nom>ODSE : squelettes du site</nom>
   <auteur lien="http://rouge-rose.net">Christophe Le Drean</auteur>
   <licence>GPL v3</licence>
-  <!-- <necessite nom="odse_core" compatibilite="[1.0.0;]" /> -->
+  <necessite nom="odse_core" compatibilite="[1.0.0;]" />
   <necessite nom="zcore" compatibilite="[2.6.7;]" />
   <necessite nom="compositions" compatibilite="[3.7.3;]" />
   <necessite nom="roles_documents" compatibilite="[1.2.23;]" />
-  <utilise nom="medoc" />
-  <utilise nom="figure" />
+  <necessite nom="medoc" compatibilite="[2.3.3;]" />
+  <necessite nom="figure" compatibilite="[1.0.0;]" />
+  <utilise nom="porte_plume_intertitres" compatibilite="[1.1.2;]" />
+  <utilise nom="suivant_precedent" compatibilite="[1.4.4;]" />
+  <chemin path="" />
 </paquet>
