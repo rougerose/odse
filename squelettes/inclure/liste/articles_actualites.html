@@ -1,7 +1,7 @@
 <B_articles_actualites>
   #ANCRE_PAGINATION
   <BOUCLE_articles_actualites(ARTICLES){id_rubrique}{!par date}{pagination #ENV{pagination, 10} #ENV{nom_pagination}}>
-    <INCLURE{fond=inclure/article_actualites_contenu, id_article, url_pagination=debut_page} />
+    <INCLURE{fond=inclure/resume/article_actualites, id_article, url_pagination=debut_page} />
   </BOUCLE_articles_actualites>
   <nav class="c-pagination pagination">#PAGINATION{page, label=page}</nav>
 </B_articles_actualites>
