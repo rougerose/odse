@@ -1,0 +1,37 @@
+<BOUCLE_article_previous_next(ARTICLES){id_article}>
+  <nav class="c-pagination c-pagination--previous-next">
+    <BOUCLE_article_precedent(ARTICLES){id_rubrique?}{precedent}{par date}{inverse  #ENV{senstri, 0}}>
+      <a href="#URL_ARTICLE" class="c-pagination__item c-pagination__item--previous[ (#ENV{class})]">
+        <INCLURE{fond=images/icon-chevronLeft.svg, class='c-pagination__icon c-pagination__icon--previous'} />
+        <span class="c-pagination__text">
+          <span class="c-pagination__label"><:{=#ENV{label_previous}}:></span>
+          <span class="c-pagination__article-titre">[(#TITRE|couper{20})]</span>
+        </span>
+      </a>
+    </BOUCLE_article_precedent>
+      <span class="c-pagination__item c-pagination__item--previous is-disabled">
+        <INCLURE{fond=images/icon-chevronLeft.svg, class='c-pagination__icon c-pagination__icon--previous is-disabled'} />
+        <span class="c-pagination__text is-disabled">
+          <span class="c-pagination__label is-disabled"><:{=#ENV{label_previous}}:></span>
+        </span>
+      </span>
+    <//B_article_precedent>
+    <BOUCLE_article_suivant(ARTICLES){id_rubrique?}{suivant}{par date}{inverse #ENV{senstri, 0}}>
+      <a href="#URL_ARTICLE" class="c-pagination__item c-pagination__item--next[ (#ENV{class})]">
+        <span class="c-pagination__text">
+          <span class="c-pagination__label"><:{=#ENV{label_next}}:></span>
+          <span class="c-pagination__article-titre">[(#TITRE|couper{20})]</span>
+        </span>
+        <INCLURE{fond=images/icon-chevronRight.svg, class='c-pagination__icon c-pagination__icon--next'} />
+      </a>
+    </BOUCLE_article_suivant>
+      <span class="c-pagination__item c-pagination__item--next is-disabled">
+        <span class="c-pagination__text is-disabled">
+          <span class="c-pagination__label is-disabled"><:{=#ENV{label_next}}:></span>
+        </span>
+        <INCLURE{fond=images/icon-chevronRight.svg, class='c-pagination__icon c-pagination__icon--next is-disabled'} />
+      </span>
+    <//B_article_suivant>
+  </nav>
+</BOUCLE_article_previous_next>
+#FILTRE{mini_html}

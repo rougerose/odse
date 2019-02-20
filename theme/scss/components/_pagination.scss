@@ -4,16 +4,121 @@
 
 
 .c-pagination {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit-large 0 $spacing-unit;
   text-align: center;
+
+  // ----- pagination spip ----- //
 
   .label {
     display: inline-block;
     margin-right: $spacing-unit-tiny;
   }
 
+  // ----- pagination spip ----- //
+
   .tbc,
   .sep {
     color: $color-grey-400;
   }
+
+  &--previous-next {
+    display: flex;
+    justify-content: center;
+  }
 }
+
+
+  //
+  // c-pagination__item
+  // -------------------------------------
+
+  .c-pagination__item {
+    display: flex;
+    margin: 0 $spacing-unit-small;
+    transition: color .5s ease;
+
+    &.is-disabled {
+      color: $color-grey-400;
+      cursor: not-allowed;
+    }
+  }
+
+  a.c-pagination__item {
+    &:hover {
+      color: $color-link-text;
+    }
+  }
+
+
+    //
+    // c-pagination__icon
+    // -------------------------------------
+
+    .c-pagination__icon {
+      align-self: center;
+      background-color: transparent;
+      border-radius: 50%;
+      fill: currentColor;
+      transition: transform .5s ease, background-color .5s ease;
+
+      &--previous {
+        margin-right: $spacing-unit;
+      }
+
+      &--next {
+        margin-left: $spacing-unit;
+      }
+
+      a.c-pagination__item:hover & {
+        background-color: $color-link-text;
+        fill: $color-black;
+
+        &--previous {
+          transform: translateX(-10px);
+        }
+
+        &--next {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+
+    //
+    // c-pagination__text
+    // -------------------------------------
+
+    .c-pagination__text {
+      display: flex;
+      flex-direction: column;
+
+      @include mq($until: s) {
+        @include inuit-hidden-visually;
+      }
+    }
+
+
+      //
+      // c-pagination__label
+      // -------------------------------------
+
+      .c-pagination__label {
+        font-family: $font-heading;
+        @include font-size(15px);
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 1px;
+          width: 50%;
+          margin: 0 auto;
+          background-color: currentColor;
+        }
+
+        &.is-disabled {
+          &::after {
+            background-color: $color-grey-400;
+          }
+        }
+      }

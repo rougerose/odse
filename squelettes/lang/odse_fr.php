@@ -20,6 +20,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
   // M
   'mots_cles_info' => "Mots-clés",
+  'mots_cles_trier_titre' => "Trier par mots-clés",
+
+  // N
+  'nav_previous_article_info' => "Article précédent",
+  'nav_next_article_info' => "Article suivant",
 
   // R
   'rechercher_titre' => "Rechercher sur le site",
