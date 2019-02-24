@@ -1,6 +1,6 @@
 <BOUCLE_resume_article(ARTICLES){id_article}>
   [(#SET{couper_intro, #ENV{couper_intro, 300}})]
-  <article class="c-article-resume">
+  <article class="c-article-resume[ (#ENV{class})]">
     <a href="#URL_ARTICLE" class="c-article-resume__link">
       <header class="c-article-resume__header">
         [<p class="c-article-resume__surtitre t-color-#ID_SECTEUR">(#SURTITRE)</p>]
@@ -11,18 +11,16 @@
         [<div class="c-article-resume__desc">
           (#INTRODUCTION{#GET{couper_intro}})
         </div>]
-        <p class="c-article-resume__meta">
-          [<span class="c-article-resume__date">(#DATE|affdate)</span>]
-          <B_mots_article>
-            | <span class="c-article-resume__tags c-tag-list">
-              <BOUCLE_mots_article(MOTS){id_article}{par titre}>
-                <span class="c-tag-list__item">#TITRE</span>
-              </BOUCLE_mots_article>
-            </span>
-          </B_mots_article>
-        </p>
-        <p class="c-lien-plus">+ En savoir plus</p>
+        [(#ENV{contexte}|=={related}|?{
+          [(#INCLURE{fond=inclure/resume/article_meta_related, id_article})]
+          ,
+          <p class="c-lien-plus"><:odse:savoir_plus_info:></p>
+        })]
       </div>
+      [(#ENV{afficher_logo}|=={oui}|oui)
+        [<figure class="c-article-resume__logo">(#LOGO_ARTICLE|adaptive_images{#ENV{logo_size, 700}})</figure>]
+      ]
     </a>
   </article>
 </BOUCLE_resume_article>
+#FILTRE{mini_html}

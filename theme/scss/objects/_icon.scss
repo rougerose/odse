@@ -149,3 +149,14 @@ $transition-function-icon-burger: cubic-bezier(0.215, 0.61, 0.355, 1);
     background-color: $color-odse;
   }
 }
+
+
+//
+// o-icon--filter-remove
+// -------------------------------------
+
+.o-icon--filter-remove {
+  height: 12px;
+  width: 12px;
+  fill: $color-red-700;
+}

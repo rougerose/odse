@@ -20,6 +20,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
   // M
   'mots_cles_info' => "Mots-clés",
+  'mot_cle_supprimer_info' => "Supprimer le mot-clé ",
   'mots_cles_trier_titre' => "Trier par mots-clés",
 
   // N
@@ -31,6 +32,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'rechercher_label' => "Votre recherche",
 
   // S
+  'savoir_plus_info' => "+ En savoir plus",
   'site_nav_titre' => "Menu",
 
   // T

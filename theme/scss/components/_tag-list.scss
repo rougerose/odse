@@ -15,14 +15,27 @@
   display: inline-block;
   margin-right: $spacing-unit-tiny;
   margin-bottom: $spacing-unit-tiny;
-  padding: 0 $spacing-unit-tiny;
   white-space: nowrap;
   transition: all .5s ease;
-}
 
-a.c-tag-list__item {
-  &:hover {
-    background-color: $color-link-text;
-    border-color: $color-link-text;
+  > a,
+  > span {
+    display: inline-block;
+    padding: 0 $spacing-unit-tiny;
+  }
+
+  > a {
+    &:hover {
+      background-color: $color-link-text;
+    }
+  }
+
+  &.is-disabled {
+    border-color: $color-grey-200;
+    color: $color-grey-300;
+  }
+
+  &.is-selected {
+    border-color: $color-purple-300;
   }
 }

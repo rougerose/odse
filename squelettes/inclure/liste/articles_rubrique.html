@@ -1,0 +1,53 @@
+#SET{articles, #ARRAY} #SET{id_rubrique, #ID_RUBRIQUE}
+<BOUCLE_articles(ARTICLES){id_rubrique}>
+  [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]
+</BOUCLE_articles>
+
+<B_mots>
+  <section class="c-rubrique__filtres c-filtres">
+    <h2 class="c-filtres__title"><:odse:mots_cles_trier_titre:></h2>
+    <B_mots_selectionnes>
+    <ul class="o-list-inline c-filtres-list c-tag-list">
+      <BOUCLE_mots_selectionnes(MOTS){id_mot IN #ENV{mots}}{par titre}>
+        [(#SET{autres_mots, #ENV{mots}|critere_mots_enleve_mot_de_liste{#ID_MOT}})]
+        <li class="o-list-inline__item c-tag-list__item is-selected"><a href="[(#SELF|parametre_url{mots, #GET{autres_mots}})]" title="<:odse:mot_cle_supprimer_info:>[ (#TITRE|attribut_html)]">#TITRE[ (#INCLURE{fond=images/icon-remove.svg})]</a></li>
+      </BOUCLE_mots_selectionnes>
+    </ul>
+    </B_mots_selectionnes>
+    <ul class="o-list-inline c-filtres-list c-tag-list">
+      <BOUCLE_mots(MOTS spip_mots_liens){id_objet IN #GET{articles}}{objet=article}{par titre}>
+        #SET{mot_en_plus, #ARRAY}
+        [(#SET{mot_en_plus,[(#ENV{mots, #ARRAY}|push{#ID_MOT})]})]
+        <INCLURE{fond=inclure/liste/mot-filtre, mots=#GET{mot_en_plus}, titre=#TITRE, id_rubrique=#GET{id_rubrique}, id_mot=#ID_MOT, selection=#ENV{mots}} />
+      </BOUCLE_mots>
+    </ul>
+  </section>
+</B_mots>
+
+<B_articles_tries>
+  <div>
+    #ANCRE_PAGINATION
+    <div class="o-grid">
+      <BOUCLE_articles_tries(ARTICLES){mots_selon_id}{id_rubrique}{!par date}{pagination #ENV{pagination, 12} #ENV{nom_pagination}}>
+        <div class="o-grid__cell u-1/2@m u-1/3@l u-flex u-flex-column">
+          <INCLURE{fond=inclure/resume/article_rubrique, id_article, class='u-flex-auto'} />
+        </div>
+      </BOUCLE_articles_tries>
+    </div>
+    <nav class="c-pagination pagination">#PAGINATION{page, label=page}</nav>
+  </div>
+</B_articles_tries>
+  <B_articles_defaut>
+    <div>
+      #ANCRE_PAGINATION
+      <div class="o-grid">
+        <BOUCLE_articles_defaut(ARTICLES){id_article IN #GET{articles}}{!par date}{pagination #ENV{pagination, 12} #ENV{nom_pagination}}>
+          <div class="o-grid__cell u-1/2@m u-1/3@l u-flex u-flex-column">
+            <INCLURE{fond=inclure/resume/article, id_article, contexte=related, afficher_logo=oui, class='u-flex-auto'} />
+          </div>
+        </BOUCLE_articles_defaut>
+      </div>
+      <nav class="c-pagination pagination">#PAGINATION{page, label='page'}</nav>
+    </div>
+  </B_articles_defaut>
+<//B_articles_tries>
