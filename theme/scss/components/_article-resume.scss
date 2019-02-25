@@ -9,6 +9,7 @@
 
   @include mq(m) {
     margin-left: $spacing-unit * -1;
+    margin-bottom: $spacing-unit-large;
 
     &::after {
       position: absolute;
