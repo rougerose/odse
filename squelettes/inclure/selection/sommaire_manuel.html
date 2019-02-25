@@ -1,0 +1,34 @@
+[(#REM)
+  Mise en forme des sélections
+  ----------------------------
+  Les sélections sont distribuées 3 par 3, et, à chaque fois, chacune
+  se voit attribuées de manière aléatoire une taille 1/2 ou 1/4
+  (pour une taille d'écran supérieure ou égale à la valeur "l"
+  des mediaqueries).
+
+][(#SET{size,
+  #ARRAY{0, 'u-1/2@m u-1/2@l', 1, 'u-1/2@m u-1/4@l', 2, 'u-1/2@m u-1/4@l'}})]
+<BOUCLE_selections_sommaire_manuel(SELECTIONS_CONTENUS){id_selection}{par rang}>
+  [(#SET{compteur, #COMPTEUR_BOUCLE|modulo{3}})]
+  [(#GET{compteur}|=={1}|oui)
+    [(#SET{size, #GET{size}|odse_array_shuffle})]
+  ]
+  <div class="o-grid__cell[ (#GET{size}|table_valeur{#GET{compteur}}) ]u-flex u-flex-column">
+    <article class="c-article-resume u-flex-auto">
+      <a href="#URL" class="c-article-resume__link">
+        <header class="c-article-resume__header">
+          <h2 class="c-article-resume__titre">#TITRE</h2>
+        </header>
+        <div class="c-article-resume__texte">
+          [<div class="c-article-resume__desc">
+            (#DESCRIPTIF)
+          </div>]
+          <p class="c-lien-plus"><:odse:savoir_plus_info:></p>
+        </div>
+        [<figure class="c-article-resume__logo">(#LOGO_SELECTIONS_CONTENUS|adaptive_images{#ENV{logo_size, 540}})</figure>]
+      </a>
+    </article>
+  </div>
+</BOUCLE_selections_sommaire_manuel>
+  <INCLURE{fond=inclure/selection/sommaire_automatique} />
+<//B_selections_sommaire_manuel>

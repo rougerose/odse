@@ -2,4 +2,3 @@
   <:par_auteur:>
   <BOUCLE_article_auteurs(AUTEURS){id_article}{par nom}>[(#COMPTEUR_BOUCLE|=={1}|?{'', [(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|?{' &amp;&nbsp;', ', '})]})][<a class="spip_in" href="#URL_AUTEUR" rel="author" itemprop="author">(#NOM)</a>]</BOUCLE_article_auteurs>
 </B_article_auteurs>
-#FILTRE{mini_html}

@@ -1,0 +1,27 @@
+<BOUCLE_rubrique_actualites(RUBRIQUES){id_rubrique}>
+  <article class="c-rubrique-resume">
+    <div class="o-grid">
+      <div class="o-grid__cell u-1/3@l">
+        <header class="c-rubrique-resume__header">
+          <h2 class="c-rubrique-resume__titre">
+            [(#INCLURE{fond=images/icon-dot.svg, class='o-icon--titre-rubrique-resume', id_rubrique})][ <span>(#TITRE)</span>]
+          </h2>
+        </header>
+      </div>
+      <div class="o-grid__cell u-2/3@l">
+        <div class="c-rubrique-resume__texte">
+          [<div class="c-rubrique-resume__desc c-rubrique-resume__desc--odse">
+            (#DESCRIPTIF)
+          </div>]
+          <ul class="o-list-bare c-rubrique-resume__actualites">
+            <BOUCLE_actualites(ARTICLES){id_rubrique}{!par date}{0,5}>
+              <li class="o-list-bare__item c-article-actu-resume t-brcolor-#ID_RUBRIQUE">
+                <h3 class="c-article-actu-resume__titre">[<time class="c-article-actu__date" datetime="[(#DATE|date_iso)]">(#DATE|jour)/[(#DATE|mois)/[(#DATE|annee)]]</time>][ <span class="c-article-actu__site">(#NOM_SITE*)</span>][ <a href="(#URL_RUBRIQUE|ancre_url{a#ID_ARTICLE})" class="c-article-actu__lien spip_in">#TITRE</a>]</h3>
+              </li>
+            </BOUCLE_actualites>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+</BOUCLE_rubrique_actualites>

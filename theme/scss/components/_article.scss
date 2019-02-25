@@ -32,7 +32,7 @@
         align-items: flex-end;
       }
 
-      @include mq(xxl) {
+      @include mq($mq-xxl) {
         margin-bottom: $spacing-unit-large;
       }
     }
@@ -73,7 +73,7 @@
       margin-bottom: $spacing-unit-large;
       line-height: 1.2;
 
-      @include mq(xxl) {
+      @include mq($mq-xxl) {
         margin-bottom: $spacing-unit-huge;
       }
     }
@@ -122,7 +122,7 @@
         @include font-size(18px);
         text-align: center;
 
-        @include mq(xxl) {
+        @include mq($mq-xxl) {
           margin-top: $spacing-unit-huge;
         }
       }
@@ -135,7 +135,7 @@
     .c-article__logo {
       margin-bottom: $spacing-unit-large;
 
-      @include mq(xxl) {
+      @include mq($mq-xxl) {
         margin-bottom: $spacing-unit-huge;
       }
     }
@@ -150,7 +150,7 @@
       &--chapo {
         margin-bottom: $spacing-unit-large;
 
-        @include mq(xxl) {
+        @include mq($mq-xxl) {
           margin-bottom: $spacing-unit-huge;
         }
       }
@@ -165,7 +165,7 @@
       margin-top: $spacing-unit-large;
       padding-top: $spacing-unit;
 
-      @include mq(xxl) {
+      @include mq($mq-xxl) {
         margin-top: $spacing-unit-huge;
       }
     }
@@ -186,7 +186,7 @@
         margin-top: $spacing-unit-large;
         padding-top: $spacing-unit;
 
-        @include mq(xxl) {
+        @include mq($mq-xxl) {
           margin-top: $spacing-unit-huge;
           padding-top: $spacing-unit-large;
         }

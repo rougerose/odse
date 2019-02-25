@@ -7,22 +7,28 @@
 // -------------------------------------
 $global-radius: 4px !default;
 $global-transition: all .3s ease-in-out !default;
-$inuit-fractions: 1 2 3 4 5 6 !default;
+$inuit-fractions: 1 2 3 4 !default;
 $inuit-wrapper-width: 1200px;
 $inuit-static-images: false;
 
 //
 // mediaqueries
 // -------------------------------------
-$mq-breakpoints: (
-  xs: 320px, // 20em
-  s: 439px, // 27.43em
-  m: 640px, // 40em
-  l: 768px, // 48em
-  xl: 1024px,
-  xxl: 1200px
-);
+// $mq-breakpoints: (
+//   xs: 320px, // 20em
+//   s: 439px, // 27.43em
+//   m: 640px, // 40em
+//   l: 768px, // 48em
+//   xl: 1024px,
+//   xxl: 1200px
+// );
 
+// Les valeurs les plus fréquentes
+$mq-breakpoints: (s: 320px, m: 640px, l: 768px, xl: 1024px);
+
+// Les valeurs utilisées ponctuellement
+$mq-sm: 439px;
+$mq-xxl: 1200px;
 
 //
 // ODSE

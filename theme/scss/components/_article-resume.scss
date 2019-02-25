@@ -44,7 +44,7 @@
     // -------------------------------------
 
     .c-article-resume__header {
-      margin-bottom: $spacing-unit-small;
+      margin-bottom: $spacing-unit;
       line-height: 1.2;
     }
 
@@ -55,7 +55,7 @@
 
       .c-article-resume__titre {
         margin-bottom: 0;
-        @include font-size(20px, false);
+        @include font-size(19px, false);
         font-weight: bold;
       }
 
@@ -66,7 +66,7 @@
 
       .c-article-resume__surtitre {
         margin-bottom: $spacing-unit-tiny;
-        @include font-size(16px, false);
+        @include font-size(18px, false);
         font-style: italic;
       }
 
@@ -78,7 +78,7 @@
       .c-article-resume__soustitre {
         margin-bottom: 0;
         margin-top: $spacing-unit-tiny;
-        @include font-size(16px, false);
+        @include font-size(18px, false);
         font-style: italic;
       }
 
@@ -95,7 +95,7 @@
       // -------------------------------------
 
       .c-article-resume__desc {
-        @include font-size(16px);
+        @include font-size(18px, 1.2);
       }
 
 

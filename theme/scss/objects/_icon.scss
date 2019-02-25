@@ -50,12 +50,23 @@ $size-std: 32px;
 // -------------------------------------
 
 .o-icon--titre-rubrique {
-  align-self: flex-end;
+  align-self: center;
   margin-right: 6px;
   height: 24px;
   width: 24px;
 }
 
+
+//
+// o-icon--titre-rubrique-resume
+// -------------------------------------
+
+.o-icon--titre-rubrique-resume {
+  align-self: center;
+  margin-right: 6px;
+  height: 20px;
+  width: 20px;
+}
 
 
 //

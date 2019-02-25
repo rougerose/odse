@@ -114,3 +114,32 @@
       // -------------------------------------
 
       .c-article-actu__lien {}
+
+
+
+// =====================================
+// c-article-actu-resume
+// =====================================
+
+.c-article-actu-resume {
+  border: 1px dotted $color-black;
+  border-width: 1px 0 0;
+  padding: $spacing-unit 0;
+
+  &:last-child {
+    border-bottom-width: 1px;
+  }
+}
+
+
+  //
+  // c-article-actu-resume__titre
+  // -------------------------------------
+
+  .c-article-actu-resume__titre {
+    margin-bottom: 0;
+    color: $color-grey-500;
+    @include font-size(18px);
+    font-family: $font-text;
+    font-weight: normal;
+  }

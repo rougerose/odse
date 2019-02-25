@@ -58,3 +58,21 @@ function mini_html($texte) {
   $texte = preg_replace(",\n+,", "", $texte);
   return $texte;
 }
+
+
+/**
+ * Fonction shuffle de php.
+ *
+ * Note : Cette fonction est un contournement car
+ * #ARRAY|shuffle produit une erreur php.
+ *
+ * @filtre
+ * @param  array $array
+ * @return array
+ */
+function odse_array_shuffle($array) {
+  if (is_array($array)) {
+    shuffle($array);
+  }
+  return $array;
+}
