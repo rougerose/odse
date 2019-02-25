@@ -2,12 +2,8 @@
 // settings: colors
 // =====================================
 
-
 $color-black: hsl(0, 0%, 0%);
 $color-white: hsl(0, 100%, 100%);
-$color-orange:     hsl(26,73%,53%);
-$color-red-orange: hsl(19,100%,41%);
-$color-green:      hsl(98,100%,25%);
 
 $color-red-50: #ffebee;
 $color-red-100: #ffcdd2;
@@ -20,26 +16,27 @@ $color-red-700: hsl(0, 65%, 51%);
 $color-red-800: #c62828;
 $color-red-900: #b71c1c;
 
-$color-orange-100: hsl(36,100%,85%);
-$color-orange-200: hsl(36,100%,75%);
-$color-orange-300: hsl(36,100%,65%);
-$color-orange-400: hsl(36,100%,57%);
-$color-orange-500: hsl(36,100%,50%);
-$color-orange-600: hsl(33,100%,49%);
-$color-orange-700: hsl(30,100%,48%);
-$color-orange-800: hsl(27,100%,47%);
-$color-orange-900: hsl(21,100%,45%);
+$color-orange-50: hsla(26, 72%, 94%, 1);
+$color-orange-100: hsla(25, 72%, 86%, 1);
+$color-orange-200: hsla(26, 73%, 77%, 1);
+$color-orange-300: hsla(26, 74%, 67%, 1);
+$color-orange-400: hsla(26, 73%, 60%, 1);
+$color-orange-500: hsla(26, 73%, 53%, 1);
+$color-orange-600: hsla(25, 71%, 51%, 1);
+$color-orange-700: hsla(23, 71%, 49%, 1);
+$color-orange-800: hsla(21, 75%, 47%, 1);
+$color-orange-900: hsla(18, 83%, 43%, 1);
 
-$color-purple-50: hsl(296,35%,91%);
-$color-purple-100: hsl(298,33%,78%);
-$color-purple-200: hsl(298,34%,63%);
-$color-purple-300: hsl(299,37%,48%);
-$color-purple-400: hsl(299,59%,36%);
-$color-purple-500: hsl(299,100%,25%);
-$color-purple-600: hsl(299,100%,24%);
-$color-purple-700: hsl(299,100%,21%);
-$color-purple-800: hsl(298,100%,19%);
-$color-purple-900: hsl(298,100%,16%);
+$color-purple-50: #f0e0f0;
+$color-purple-100: #d8b3d9;
+$color-purple-200: #bf80c0;
+$color-purple-300: #a54da6;
+$color-purple-400: #912693;
+$color-purple-500: #7e0080;
+$color-purple-600: #760078;
+$color-purple-700: #6b006d;
+$color-purple-800: #610063;
+$color-purple-900: #4e0050;
 
 $color-grey-50: hsl(0,0%,98%);
 $color-grey-100: hsl(0,0%,96%);
@@ -52,32 +49,45 @@ $color-grey-700: hsl(0,0%,38%);
 $color-grey-800: hsl(0,0%,26%);
 $color-grey-900: hsl(0,0%,13%);
 
-$color-olive-800: hsl(76,60%,15%);
-$color-olive-700: hsl(76,60%,35%);
-$color-olive-600: hsl(76,60%,40%);
-$color-olive-500: hsl(76,60%,50%);
-$color-olive-400: hsl(76,60%,60%);
+$color-olive-900: #77ad14;
+$color-olive-800: #88b920;
+$color-olive-700: #91c027;
+$color-olive-600: #9bc72e;
+$color-olive-500: #a3cc33;
+$color-olive-400: #b1d452;
+$color-olive-300: #bfdb70;
+$color-olive-200: #d1e699;
+$color-olive-100: #e3f0c2;
+$color-olive-50: #f4f9e7;
 
-$color-caribbean-green-400: hsl(169, 91%, 42%);
-$color-caribbean-green-500: hsl(169, 91%, 50%);
 
 //
 // Couleurs identitaires ODSE
 // -------------------------------------
 $color-odse:      $color-purple-500;
-$color-informer:  $color-orange;
-$color-actions:   $color-red-orange;
-$color-recherche: $color-green;
-$color-actualites: $color-caribbean-green-400;
+$color-informer:  $color-orange-500;
+$color-actions:   $color-red-500;
+$color-actualites: $color-olive-500;
 
+// Variantes sombres
+$color-odse-dark: $color-purple-700;
+$color-informer-dark: $color-orange-700;
+$color-actions-dark: $color-red-700;
+$color-actualites-dark: $color-olive-800;
+
+
+//
 // Liens
+// -------------------------------------
 $color-link-text: $color-purple-100;
+
 
 //
 // Overlay
 // -------------------------------------
 $color-dialog-overlay-default: rgba(255,255,255, 0.95);
 $color-dialog-overlay-site-nav: rgba(0,0,0, 0.95);
+
 
 //
 // Messages

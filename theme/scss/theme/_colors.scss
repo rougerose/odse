@@ -2,14 +2,22 @@
 // t-color
 // =====================================
 
-$secteurIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $color-actualites) !default;
+$colorIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $color-actualites) !default;
 
-@each $ID, $color  in $secteurIDs {
+$colorDarkIDs: (1, $color-informer-dark), (3, $color-odse-dark), (4, $color-actions-dark), (24, $color-actualites-dark) !default;
+
+@each $ID, $color  in $colorIDs {
   .t-color-#{$ID} {
     color: $color;
   }
 
   .t-brcolor-#{$ID} {
     border-color: $color;
+  }
+}
+
+@each $ID, $color  in $colorDarkIDs {
+  .t-color-dark-#{$ID} {
+    color: $color;
   }
 }

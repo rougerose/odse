@@ -1,0 +1,12 @@
+[(#REM)
+  Rubrique "Qui sommes-nous ?"
+  ----------------------------
+  La rubrique affiche directement le premier article publié qui devrait
+  être, en principe, le seul dans cette rubrique.
+
+]
+<BOUCLE_rubrique_ODSE(RUBRIQUES){id_rubrique}>
+  <BOUCLE_article_ODSE(ARTICLES){id_rubrique}{0,1}{par date}>
+    <INCLURE{fond=content/article-odse, id_article} />
+  </BOUCLE_article_ODSE>
+</BOUCLE_rubrique_ODSE>
