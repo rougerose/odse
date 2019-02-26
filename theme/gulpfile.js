@@ -13,7 +13,10 @@ sass.compiler = require('node-sass');
 
 const options = {
   sass: {
-    src: 'scss/odse.scss',
+    src: {
+      public: 'scss/odse.scss',
+      prive: 'scss/odse-prive.scss'
+    },
     dest: 'css/',
     sassOpts: {
       includePaths: './node_modules',
@@ -23,7 +26,10 @@ const options = {
     watch: 'scss/**/*'
   },
   css: {
-    src: 'css/odse.css',
+    src: {
+      public: 'css/odse.css',
+      prive: 'css/odse-prive.css'
+    },
     dest: 'css/'
   },
   js: {
@@ -31,10 +37,14 @@ const options = {
     dest: 'javascript/'
   },
   libJs: {
-    src: [
-      'node_modules/a11y-dialog/a11y-dialog.min.js',
-      'node_modules/body-scroll-lock/lib/bodyScrollLock.min.js'
-    ]
+    src: {
+      public: [
+        'node_modules/a11y-dialog/a11y-dialog.min.js',
+        'node_modules/body-scroll-lock/lib/bodyScrollLock.min.js',
+        'node_modules/@glidejs/glide/dist/glide.min.js'
+      ],
+      prive: 'node_modules/@glidejs/glide/dist/glide.min.js'
+    }
   }
 };
 
@@ -46,7 +56,12 @@ function clean(cb) {
 function scss(cb) {
   let plugins = [autoprefixer(), cssnano()];
 
-  src(options.sass.src)
+  src(options.sass.src.public)
+    .pipe(sass(options.sass.sassOpts)).on('error', sass.logError)
+    .pipe(postcss(plugins))
+    .pipe(dest(options.sass.dest));
+
+  src(options.sass.src.prive)
     .pipe(sass(options.sass.sassOpts)).on('error', sass.logError)
     .pipe(postcss(plugins))
     .pipe(dest(options.sass.dest));
@@ -83,8 +98,12 @@ function minifyJs(cb) {
 };
 
 function libJs(cb) {
-  src(options.libJs.src)
-    .pipe(concat('lib.js'))
+  src(options.libJs.src.public)
+    .pipe(concat('lib.min.js'))
+    .pipe(dest(options.js.dest));
+
+  src(options.libJs.src.prive)
+    .pipe(concat('odse-lib.min.js'))
     .pipe(dest(options.js.dest));
   cb();
 }

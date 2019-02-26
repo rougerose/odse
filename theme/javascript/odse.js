@@ -6,7 +6,6 @@ var searchForm = (function() {
     $searchbox = $('.c-search-box');
     $searchInput = $searchbox.find('input.search');
     self.bindActions();
-    console.log($searchbox, $searchInput);
   };
 
   self.bindActions = function() {

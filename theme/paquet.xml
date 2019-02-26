@@ -12,7 +12,9 @@
   <necessite nom="odse_squelettes" compatibilite="[1.0.0;]" />
   <spip compatibilite="[3.2.0;3.2.*]">
     <style type="public" source="css/odse.css" />
-    <script type="public" source="javascript/lib.js" />
+    <script type="public" source="javascript/lib.min.js" />
     <script type="public" source="javascript/odse.min.js" />
+    <style type="prive" source="css/odse-prive.css" />
+    <script type="prive" source="javascript/odse-lib.min.js" />
   </spip>
 </paquet>
