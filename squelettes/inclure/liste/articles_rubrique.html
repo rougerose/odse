@@ -10,7 +10,7 @@
     <ul class="o-list-inline c-filtres-list c-filtres-list--select c-tag-list">
       <BOUCLE_mots_selectionnes(MOTS){id_mot IN #ENV{mots}}{par titre}>
         [(#SET{autres_mots, #ENV{mots}|critere_mots_enleve_mot_de_liste{#ID_MOT}})]
-        <li class="o-list-inline__item c-tag-list__item is-selected"><a href="[(#SELF|parametre_url{mots, #GET{autres_mots}})]" title="<:odse:mot_cle_supprimer_info:>[ (#TITRE|attribut_html)]">#TITRE[ (#INCLURE{fond=images/icon-remove.svg})]</a></li>
+        <li class="o-list-inline__item c-tag-list__item is-selected"><a href="[(#SELF|parametre_url{mots, #GET{autres_mots}})]" title="<:odse:mot_cle_supprimer_info:>[ (#TITRE|attribut_html)]" class="ajax">#TITRE[ (#INCLURE{fond=images/icon-remove.svg})]</a></li>
       </BOUCLE_mots_selectionnes>
     </ul>
     </B_mots_selectionnes>
