@@ -2,7 +2,7 @@
 #SET{url_doc, ''}
 <B_documents>
   #ANCRE_PAGINATION
-  [<h2 class="c-rr__titre">(#ENV{items}|count|singulier_ou_pluriel{odse:rechercher_resultat_documents_info, odse:rechercher_resultats_documents_info, nb})</h2>]
+  [<h2 class="c-rr__titre c-rs__titre">(#ENV{items}|count|singulier_ou_pluriel{odse:rechercher_resultat_documents_info, odse:rechercher_resultats_documents_info, nb})</h2>]
   <ol class="spip c-rr__liste"[ style="counter-increment: item (#GET{decalage_compteur});"]>
     <BOUCLE_documents(DOCUMENTS){id_document IN #ENV{items}}{pagination #ENV{pagination, 10}}>
       [(#REM) <!-- calcul de l'url du document dans un article --> ]

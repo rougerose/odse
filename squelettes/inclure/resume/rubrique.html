@@ -1,0 +1,20 @@
+[(#REM)
+  <!--
+  La mise en forme et les classes sont identiques aux resumé d'articles.
+  -->
+]
+<BOUCLE_resume_rubrique(RUBRIQUES){id_rubrique}>
+  <article class="c-article-resume[ (#ENV{class})]">
+    <a href="#URL_RUBRIQUE" class="c-article-resume__link">
+      <header class="c-article-resume__header">
+        <h2 class="c-article-resume__titre">#TITRE</h2>
+      </header>
+      <div class="c-article-resume__texte">
+        [<div class="c-article-resume__desc">
+          (#DESCRIPTIF)
+        </div>]
+        <p class="c-lien-plus"><:odse:savoir_plus_info:></p>
+      </div>
+    </a>
+  </article>
+</BOUCLE_resume_rubrique>

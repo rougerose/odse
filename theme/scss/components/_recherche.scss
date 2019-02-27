@@ -12,10 +12,11 @@
   .c-recherche__searchbox {
     border: 1px solid $color-grey-500;
     border-radius: 5px;
+    margin: $spacing-unit 0;
     padding: $spacing-unit-small;
 
     @include mq(m) {
-      margin: 0 $spacing-unit;
+      margin: $spacing-unit-large $spacing-unit;
       padding: $spacing-unit;
     }
   }
@@ -57,16 +58,12 @@
   // -------------------------------------
 
   .c-recherche-resultats__section {
-    border-bottom: 1px dotted $color-recherche;
-    margin-bottom: $spacing-unit;
-    padding-bottom: $spacing-unit;
+    .c-pagination {
+      padding: 0;
+    }
 
     @include mq(m) {
       margin: 0 $spacing-unit $spacing-unit;
-    }
-
-    .c-pagination {
-      padding: 0;
     }
   }
 
@@ -76,9 +73,9 @@
     // -------------------------------------
 
     .c-rr__titre {
-      color: $color-recherche;
-      @include font-size(20px);
-      font-weight: bold;
+      // color: $color-recherche;
+      // @include font-size(22px);
+      // font-weight: bold;
     }
 
 

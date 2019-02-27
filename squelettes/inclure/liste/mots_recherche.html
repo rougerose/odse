@@ -1,7 +1,7 @@
 #SET{decalage_compteur, #ENV{debut_mots, 0}}
 <B_mots>
   #ANCRE_PAGINATION
-  [<h2 class="c-rr__titre">(#ENV{items}|count|singulier_ou_pluriel{odse:rechercher_resultat_mots_info, odse:rechercher_resultats_mots_info, nb})</h2>]
+  [<h2 class="c-rr__titre c-rs__titre">(#ENV{items}|count|singulier_ou_pluriel{odse:rechercher_resultat_mots_info, odse:rechercher_resultats_mots_info, nb})</h2>]
   <ol class="spip c-rr__liste"[ style="counter-increment: item (#GET{decalage_compteur});"]>
     <BOUCLE_mots(MOTS){id_mot IN #ENV{items}}{pagination #ENV{pagination, 10}}>
       <li class="c-rr__item c-rri">

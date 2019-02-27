@@ -45,6 +45,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'rechercher_resultats_mots_info' => "Les mots-clés",
   'rechercher_resultat_documents_info' => "Le document",
   'rechercher_resultats_documents_info' => "Les documents",
+
+  'mot_article_liaison_info' => "1 article lié",
+  'mot_articles_liaison_info' => "@nb@ articles liés",
+  'mot_rubrique_liaison_info' => "1 rubrique liée",
+  'mot_rubriques_liaison_info' => "@nb@ rubriques liées",
+
   // S
   'savoir_plus_info' => "+ En savoir plus",
   'site_nav_titre' => "Menu",
