@@ -18,7 +18,7 @@
       <BOUCLE_mots(MOTS spip_mots_liens){id_objet IN #GET{articles}}{objet=article}{par titre}>
         #SET{mot_en_plus, #ARRAY}
         [(#SET{mot_en_plus,[(#ENV{mots, #ARRAY}|push{#ID_MOT})]})]
-        <INCLURE{fond=inclure/liste/mot-filtre, mots=#GET{mot_en_plus}, titre=#TITRE, id_rubrique=#GET{id_rubrique}, id_mot=#ID_MOT, selection=#ENV{mots}} />
+        <INCLURE{fond=inclure/liste/mot_filtre, mots=#GET{mot_en_plus}, titre=#TITRE, id_rubrique=#GET{id_rubrique}, id_mot=#ID_MOT, selection=#ENV{mots}} />
       </BOUCLE_mots>
     </ul>
   </section>
