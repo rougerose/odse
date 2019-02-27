@@ -24,7 +24,6 @@
 
   label {
     position: absolute;
-    z-index: $zindex-site-nav + 10;
     color: $color-grey-500;
     font-family: $font-heading;
     text-transform: uppercase;
@@ -36,7 +35,7 @@
     border-bottom: 1px solid $color-grey-500;
     flex: 1;
     position: relative;
-    z-index: $zindex-site-nav + 11;
+
     background-color: transparent;
     transition: all .5s ease;
   }
@@ -47,8 +46,13 @@
 
   &--mobile {
 
+    label {
+      z-index: $zindex-dialog-overlay + 1;
+    }
+
     input.search {
       color: $color-white;
+      z-index: $zindex-dialog-overlay + 2;
 
       &:focus,
       &.is-filled {
@@ -68,16 +72,17 @@
 
   &--large {
     label {
+      z-index: $zindex-dialog-overlay + 1;
       @include font-size(20px);
     }
 
     input.search {
+      z-index: $zindex-dialog-overlay + 2;
       color: $color-black;
       @include font-size(20px);
 
       &:focus,
       &.is-filled {
-        background-color: $color-dialog-overlay-default;
         border-bottom-color: $color-black;
 
         + .c-btn--search {
@@ -89,5 +94,9 @@
         }
       }
     }
+  }
+
+  &.is-filled {
+    label {color: transparent;}
   }
 }

@@ -85,7 +85,9 @@ $mq-site-nav: 900px;
       }
     }
 
-    &--mobile {}
+    &--mobile {
+      margin-right: $spacing-unit + $spacing-unit-tiny;
+    }
   }
 
 

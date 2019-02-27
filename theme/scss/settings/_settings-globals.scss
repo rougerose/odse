@@ -43,6 +43,6 @@ $mq-xxl: 1200px;
   $transition-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
   // ----- z-index ----- //
-  $zindex-dialog-overlay: 10;
-  $zindex-site-nav: 10;
-  $zindex-spip-admin-float: 100;
+  $zindex-dialog-overlay: 100;
+  $zindex-site-nav: 80;
+  $zindex-spip-admin-float: 200;
