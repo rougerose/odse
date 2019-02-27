@@ -160,6 +160,11 @@ $mq-site-nav: 900px;
       .c-sn-menu__link {
         display: flex;
         text-decoration: none;
+        transition: color .15s ease;
+
+        > span {
+          display: inline-block;
+        }
 
         &:hover {
           color: $color-odse;

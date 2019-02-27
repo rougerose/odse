@@ -3,7 +3,7 @@
     <ul class="o-list-bare c-sn-menu__list [c-sn-menu__list--(#ENV{variante, mobile})]">
       <BOUCLE_rubriques_principales(RUBRIQUES){par num titre, titre}{profondeur=0}>
         <li class="o-list-bare__item c-sn-menu__item [c-sn-menu__item--(#ENV{variante, mobile})]">
-          <a href="#URL_RUBRIQUE" class="c-sn-menu__link [c-sn-menu__link--(#ENV{variante, mobile})]">
+          <a href="#URL_RUBRIQUE" class="c-sn-menu__link [c-sn-menu__link--(#ENV{variante, mobile})][ (#ENV{id_rubrique}|=={#ID_RUBRIQUE}|oui)is-selected t-color-#ID_RUBRIQUE]">
             [(#SET{class, [o-icon--menu o-icon--menu-(#ENV{variante, mobile})]})]
             [(#INCLURE{fond=images/icon-dot.svg, class=#GET{class}, id_rubrique})]
             <span>#TITRE</span>
