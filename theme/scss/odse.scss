@@ -137,7 +137,6 @@
 @import "components/article-resume";
 @import "components/article-actu";
 
-@import "components/membres";
 @import "components/message";
 @import "components/doc-download";
 @import "components/pagination";
@@ -164,6 +163,9 @@
 // GlideJs
 @import "@glidejs/glide/src/assets/sass/glide.core";
 @import "@glidejs/glide/src/assets/sass/glide.theme";
+
+@import "components/membres";
+@import "components/glide";
 
 // THEME PLUGIN ODSE
 @import "theme/colors";
