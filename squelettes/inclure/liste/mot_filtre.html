@@ -1,5 +1,5 @@
 <BOUCLE_mot_filtre(ARTICLES){id_rubrique=#ENV{id_rubrique}}{mots_selon_id}{pagination 1}>
-  [<li class="o-list-inline__item c-tag-list__item"><a href="[(#SELF|parametre_url{debut_page, ''}|parametre_url{mots\[\], #ENV{mots}})]" class="ajax">(#ENV{titre})</a></li>]
+  [<li class="o-list-inline__item c-tag-list__item"><a href="[(#SELF|parametre_url{debut_page, ''}|parametre_url{mots\[\], #ENV{mots}})]" class="ajax" rel="nofollow">(#ENV{titre})</a></li>]
 </BOUCLE_mot_filtre>
   [(#ENV{id_mot}|in_array{#ENV{selection}}|non)
     <li class="o-list-inline__item c-tag-list__item is-disabled"><span>#ENV{titre}</span></li>
