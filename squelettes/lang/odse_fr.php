@@ -13,6 +13,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'article_message_peremption_singulier' => "Cet article a été publié il y a @nb@ an, les informations qu'il contient ne sont peut-être plus d'actualité.",
   'article_message_peremption_pluriel' => "Cet article a été publié il y a @nb@ ans, les informations qu'il contient ne sont peut-être plus d'actualité.",
 
+  'auteur_article_liaison_info' => "1 article lié à cet auteur",
+  'auteur_articles_liaison_info' => "@nb@ articles liés à cet auteur",
+
   // C
   'cfg_label_articles_peremption_delai' => "Délai de péremption",
   'cfg_explication_articles_peremption_delai' => "Délai, exprimés en mois, à partir duquel les articles sont a priori périmés. Un message d’alerte sera affiché au visiteur.",
