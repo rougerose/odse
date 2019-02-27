@@ -2,9 +2,6 @@
   <div class="o-wrapper">
     <article class="c-article">
       <div class="c-article__container">
-        <aside class="c-article__meta">
-          <p class="c-article__date"><time datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
-        </aside>
 
         <header class="c-article__header">
           [<p class="c-article__surtitre t-color-#ID_SECTEUR">(#SURTITRE)</p>]
@@ -27,6 +24,10 @@
         [<div class="c-article__ps c-spip-text u-hr u-hr--top">
           (#PS)
         </div>]
+
+        <footer class="c-article-actu__source">
+          <p>[<time class="c-article-actu__date" datetime="[(#DATE|date_iso)]">(#DATE|affdate)</time>][ <span class="c-article-actu__site">(#NOM_SITE*)</span>][ <a href="(#URL_SITE)" class="c-article-actu__lien spip_out">#URL_SITE</a>]</p>
+        </footer>
 
         [<footer class="c-article__footer c-af">
           <div class="o-grid">
