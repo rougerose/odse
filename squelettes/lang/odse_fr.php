@@ -21,6 +21,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'cfg_explication_articles_peremption_delai' => "Délai, exprimés en mois, à partir duquel les articles sont a priori périmés. Un message d’alerte sera affiché au visiteur.",
   'contenus_connexes_info' => "Sur le même sujet",
 
+  // E
+  'erreur_404_info' => "La page demandée n’est pas disponible.",
+
   // M
   'mots_cles_info' => "Mots-clés",
   'mot_cle_supprimer_info' => "Supprimer le mot-clé ",
