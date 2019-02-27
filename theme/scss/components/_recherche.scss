@@ -1,0 +1,145 @@
+// =====================================
+// c-recherche
+// =====================================
+
+.c-recherche {}
+
+
+  //
+  // c-recherche__searchbox
+  // -------------------------------------
+
+  .c-recherche__searchbox {
+    border: 1px solid $color-grey-500;
+    border-radius: 5px;
+    padding: $spacing-unit-small;
+
+    @include mq(m) {
+      margin: 0 $spacing-unit;
+      padding: $spacing-unit;
+    }
+  }
+
+
+//
+// c-recherche-resultats
+// -------------------------------------
+
+.c-recherche-resultats {
+  margin: 0 spacing-unit-small;
+
+  @include mq(m) {
+    margin: 0 $spacing-unit;
+  }
+}
+
+
+  //
+  // c-recherche-resultats__titre
+  // -------------------------------------
+
+  .c-recherche-resultats__titre {
+    color: $color-recherche;
+    @include font-size(24px);
+    font-weight: bold;
+
+    > a {
+      margin-right: $spacing-unit-small;
+      @include font-size(18px);
+      font-weight: normal;
+      white-space: nowrap;
+    }
+  }
+
+
+  //
+  // c-recherche-resultats__section
+  // -------------------------------------
+
+  .c-recherche-resultats__section {
+    border-bottom: 1px dotted $color-recherche;
+    margin-bottom: $spacing-unit;
+    padding-bottom: $spacing-unit;
+
+    @include mq(m) {
+      margin: 0 $spacing-unit $spacing-unit;
+    }
+
+    .c-pagination {
+      padding: 0;
+    }
+  }
+
+
+    //
+    // c-rr__titre
+    // -------------------------------------
+
+    .c-rr__titre {
+      color: $color-recherche;
+      @include font-size(20px);
+      font-weight: bold;
+    }
+
+
+    //
+    // c-rr__liste
+    // -------------------------------------
+
+    .c-rr__liste {}
+
+
+      //
+      // c-rr__item / c-rri
+      // -------------------------------------
+
+      .c-rr__item {
+        margin-bottom: $spacing-unit;
+
+        &::before {
+          color: $color-recherche;
+          font-family: $font-heading;
+          font-weight: bold;
+        }
+      }
+
+
+      //
+      // c-rri__link
+      // -------------------------------------
+
+      .c-rri__link {}
+
+
+        //
+        // c-rri__titre
+        // -------------------------------------
+
+        .c-rri__titre {
+          @include font-size(18px);
+          margin-bottom: 0;
+
+          @include mq(m) {
+            @include font-size(19px);
+          }
+        }
+
+
+        //
+        // c-rri__desc
+        // -------------------------------------
+
+        .c-rri__desc {
+          margin-top: $spacing-unit-small;
+
+          > p {
+            margin-bottom: 0;
+            line-height: 1.2;
+          }
+
+          @include mq(m) {
+            > p {
+              @include font-size(18px);
+            }
+          }
+        }

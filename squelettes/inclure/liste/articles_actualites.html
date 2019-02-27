@@ -3,7 +3,7 @@
   <BOUCLE_articles_actualites(ARTICLES){id_rubrique}{!par date}{pagination #ENV{pagination, 10} #ENV{nom_pagination}}>
     <INCLURE{fond=inclure/resume/article_actualites, id_article} />
   </BOUCLE_articles_actualites>
-  <nav class="c-pagination pagination">#PAGINATION{page, label=page}</nav>
+  [<nav class="c-pagination pagination">(#PAGINATION{page, label=page})</nav>]
 </B_articles_actualites>
   <p>Aucun article disponible.</p>
 <//B_articles_actualites>
