@@ -56,9 +56,12 @@
     // -------------------------------------
 
     .c-rubrique__section {
-      border-bottom: 1px dotted $color-recherche;
       margin-bottom: $spacing-unit-large;
-      padding-bottom: $spacing-unit;
+
+      & + & {
+        border-top: 1px dotted $color-recherche;
+        padding-top: $spacing-unit;
+      }
     }
 
 

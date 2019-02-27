@@ -16,7 +16,9 @@
   // c-site__header
   // -------------------------------------
 
-  .c-site-page__header {}
+  .c-site__header {
+    margin: $spacing-unit 0;
+  }
 
 
     //
