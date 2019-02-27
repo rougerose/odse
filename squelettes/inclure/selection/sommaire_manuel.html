@@ -20,7 +20,7 @@
       [(#REM)
         <!-- Test de la présence de logo(s) pour cette série -->
       ][(#GET{somme_logo}|=={0}|?{#SET{logo, 0}, #SET{logo, 1}})]
-      [(#INCLURE{fond=inclure/liste/selections_sommaire, id_selection, selection=#GET{selection}, logo=#GET{logo}})]
+      [(#INCLURE{fond=inclure/liste/selections_sommaire_manuel, id_selection, selection=#GET{selection}, logo=#GET{logo}})]
 
       [(#REM)
         <!-- Max de sélections dans une rangée est atteint,
@@ -38,7 +38,7 @@
       <!-- Si la série contient moins de 3 éléments --> ]
     [(#TOTAL_BOUCLE|=={#COMPTEUR_BOUCLE}|oui)
       [(#GET{somme_logo}|=={0}|?{#SET{logo, 0}, #SET{logo, 1}})]
-      [(#INCLURE{fond=inclure/liste/selections_sommaire, id_selection, selection=#GET{selection}, logo=#GET{logo}})]
+      [(#INCLURE{fond=inclure/liste/selections_sommaire_manuel, id_selection, selection=#GET{selection}, logo=#GET{logo}})]
     ]
     [(#REM)
       <!-- Incrémenter le compteur --> ]
