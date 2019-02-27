@@ -1,0 +1,23 @@
+[(#REM)
+  Mise en forme des articles
+  ----------------------------
+
+  Si la série contient au moins un logo, la taille maximum de l'article
+  est de u-1/2.
+  Les articles ne contenant pas de logo dans cette série seront d'une taille
+  maximum de 1/4.
+
+  Si la série ne contient aucun logo, la taille maximum de chaque article
+  est de u-1/3.
+]
+<BOUCLE_selections_sommaire_automatique(ARTICLES){id_article IN #ENV{selection}}>
+  [(#ENV{logo}|oui)
+    [(#LOGO_ARTICLE|?{
+      #SET{class, u-1/2@l},
+      #SET{class, u-1/4@l}
+    })]
+  ][(#ENV{logo}|non) #SET{class, u-1/3@l} ]
+  <div class="o-grid__cell u-1/2@m[ (#GET{class}) ]u-flex u-flex-column">
+    <INCLURE{fond=inclure/resume/article, id_article, class='u-flex', afficher_logo=oui} />
+  </div>
+</BOUCLE_selections_sommaire_automatique>
