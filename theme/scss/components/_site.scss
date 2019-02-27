@@ -9,11 +9,6 @@
 
 .c-site {
   font-family: $font-text;
-
-  // &.js-overlay-is-visible {
-  //   overflow: hidden;
-  //   height: 100vh;
-  // }
 }
 
 
@@ -32,7 +27,7 @@
       position: relative;
       color: $color-odse;
       font-family: $font-heading;
-      @include font-size(18px, 1.2);
+      @include font-size(18px, 1.1);
       font-weight: normal;
       text-align: center;
       text-transform: uppercase;
@@ -62,6 +57,7 @@
 
         @include mq(500px) {
           margin: $spacing-unit 0;
+          line-height: 1;
         }
       }
     }
@@ -75,5 +71,47 @@
 
     &[aria-hidden="true"] {
       overflow: hidden;
+    }
+  }
+
+
+  //
+  // c-site__footer / c-sf
+  // -------------------------------------
+
+  .c-site__footer {
+    padding-bottom: $spacing-unit;
+
+    > .c-site__title {
+      margin-bottom: 0;
+    }
+  }
+
+
+  //
+  // c-sf__nav
+  // -------------------------------------
+
+  .c-sf__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(400px) {
+      flex-direction: row;
+    }
+
+    > a {
+      margin: 0 $spacing-unit-small;
+      font-family: $font-heading;
+      @include font-size(14px);
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color .15s ease;
+
+      &:hover {
+        color: $color-odse;
+      }
     }
   }
