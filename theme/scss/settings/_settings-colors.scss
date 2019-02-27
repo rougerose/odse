@@ -49,6 +49,17 @@ $color-grey-700: hsl(0,0%,38%);
 $color-grey-800: hsl(0,0%,26%);
 $color-grey-900: hsl(0,0%,13%);
 
+$color-blue-grey-50: #eceff1;
+$color-blue-grey-100: #cfd8dc;
+$color-blue-grey-200: #b0bec5;
+$color-blue-grey-300: #90a4ae;
+$color-blue-grey-400: #78919c;
+$color-blue-grey-500: #607d8b;
+$color-blue-grey-600: #587583;
+$color-blue-grey-700: #4e6a78;
+$color-blue-grey-800: #44606e;
+$color-blue-grey-900: #334d5b;
+
 $color-olive-900: #77ad14;
 $color-olive-800: #88b920;
 $color-olive-700: #91c027;
@@ -68,6 +79,7 @@ $color-odse:      $color-purple-500;
 $color-informer:  $color-orange-500;
 $color-actions:   $color-red-500;
 $color-actualites: $color-olive-500;
+$color-recherche: $color-blue-grey-500;
 
 // Variantes sombres
 $color-odse-dark: $color-purple-700;
@@ -75,6 +87,10 @@ $color-informer-dark: $color-orange-700;
 $color-actions-dark: $color-red-700;
 $color-actualites-dark: $color-olive-800;
 
+
+$colorIDs: (1, $color-informer), (3, $color-odse), (4, $color-actions), (24, $color-actualites), (0, $color-recherche) !default;
+
+$colorDarkIDs: (1, $color-informer-dark), (3, $color-odse-dark), (4, $color-actions-dark), (24, $color-actualites-dark) !default;
 
 //
 // Liens
