@@ -10,8 +10,8 @@
 
     // ----- paragraphes et blocs ----- //
     p,
-    ul,
-    ol,
+    ul.spip,
+    ol.spip,
     dl,
     table,
     .spip_code,
@@ -50,23 +50,22 @@
 
 
     // ----- intertitres ----- //
-    h2, h3, h4, h5, h6 {
+    .h2, .h3, .h4, .h5, .h6 {
       margin-top: $spacing-unit-large;
       color: $color-purple-700;
       font-family: $font-text;
       line-height: 1.2;
     }
 
-    h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
+    .h2 + .h3, .h3 + .h4, .h4 + .h5, .h5 + .h6 {
       margin-top: $spacing-unit;
     }
 
-    h2 {
+    .h2 {
       @include font-size(28px, false);
     }
 
-    h6 {
-      @include font-size(28px, false);
+    .h6 {
       font-style: italic;
     }
   }

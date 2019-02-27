@@ -30,7 +30,7 @@
     <div class="o-grid">
       <BOUCLE_articles_tries(ARTICLES){mots_selon_id}{id_rubrique}{!par date}{pagination #ENV{pagination, 12} #ENV{nom_pagination}}>
         <div class="o-grid__cell u-1/2@m u-1/3@l u-flex u-flex-column">
-          <INCLURE{fond=inclure/resume/article, id_article, contexte=related, afficher_logo=oui, class='u-flex-auto'} />
+          <INCLURE{fond=inclure/resume/article, id_article, contexte=related, afficher_logo=oui, class='u-flex'} />
         </div>
       </BOUCLE_articles_tries>
     </div>
@@ -43,7 +43,7 @@
       <div class="o-grid">
         <BOUCLE_articles_defaut(ARTICLES){id_article IN #GET{articles}}{!par date}{pagination #ENV{pagination, 12} #ENV{nom_pagination}}>
           <div class="o-grid__cell u-1/2@m u-1/3@l u-flex u-flex-column">
-            <INCLURE{fond=inclure/resume/article, id_article, contexte=related, afficher_logo=oui, class='u-flex-auto'} />
+            <INCLURE{fond=inclure/resume/article, id_article, contexte=related, afficher_logo=oui, class='u-flex'} />
           </div>
         </BOUCLE_articles_defaut>
       </div>

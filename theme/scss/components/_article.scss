@@ -86,6 +86,10 @@
       .c-article__titre {
         margin-bottom: 0;
         @include font-size(28px, false);
+
+        @include mq(m) {
+          @include font-size(36px, false);
+        }
       }
 
 
@@ -95,7 +99,7 @@
 
       .c-article__surtitre {
         margin-bottom: $spacing-unit-small;
-        @include font-size(20px, false);
+        @include font-size(22px, false);
         font-style: italic;
       }
 
@@ -107,7 +111,7 @@
       .c-article__soustitre {
         margin-bottom: 0;
         margin-top: $spacing-unit-small;
-        @include font-size(20px, false);
+        @include font-size(22px, false);
         font-style: italic;
       }
 

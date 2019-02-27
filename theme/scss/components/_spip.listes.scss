@@ -19,7 +19,6 @@ ol.spip {
 ol.spip > li {
   display: table;
   counter-increment: item;
-  margin-bottom: 0.6em;
 
   &::before {
     content: counters(item, ".") ". ";

@@ -5,6 +5,7 @@
 
 .c-article-resume {
   position: relative;
+  flex: 1;
   margin-bottom: $spacing-unit;
 
   @include mq(m) {
@@ -31,6 +32,7 @@
 
   .c-article-resume__link {
     display: block;
+    flex: 1;
     padding: $spacing-unit;
     transition: background-color .5s ease;
 
