@@ -97,8 +97,9 @@ $mq-site-nav: 900px;
     .c-sn-menu__search {
 
       &--large {
-        position: absolute;
-        right: -32px + -12px;
+        margin-left: 12px;
+        // position: absolute;
+        // right: -32px + -12px;
         height: 32px;
         width: 32px;
       }

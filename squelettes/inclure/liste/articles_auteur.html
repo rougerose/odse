@@ -4,7 +4,7 @@
     [<h2 class="c-rs__titre">(#GRAND_TOTAL|singulier_ou_pluriel{odse:auteur_article_liaison_info, odse:auteur_articles_liaison_info, nb})</h2>]
     <div class="o-grid">
       <BOUCLE_articles_auteur(ARTICLES){id_auteur}{!par date}{pagination #ENV{pagination, 12} }>
-        <div class="o-grid__cell u-1/2@m u-1/3@l u-flex u-flex-column">
+        <div class="o-grid__cell u-1/2@m u-1/3@l u-flex">
           <INCLURE{fond=inclure/resume/article, id_article, contexte=related, afficher_logo=oui, class='u-flex'} />
         </div>
       </BOUCLE_articles_auteur>

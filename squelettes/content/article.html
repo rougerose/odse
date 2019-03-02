@@ -73,8 +73,8 @@
           </div>
 
           <BOUCLE_articles_connexes(ARTICLES){id_article!=#ID_ARTICLE}{mots 50% #GET{mots} !tri}{!par date}{0,3}>
-            <div class="o-grid__cell u-1/2@m u-1/3@l u-flex u-flex-column">
-              <INCLURE{fond=inclure/resume/article, id_article, contexte='related', class='u-flex-auto'} />
+            <div class="o-grid__cell u-1/2@m u-1/3@l u-flex">
+              <INCLURE{fond=inclure/resume/article, id_article, contexte='related', class='u-flex'} />
             </div>
           </BOUCLE_articles_connexes>
 

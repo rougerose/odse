@@ -49,10 +49,11 @@
 
   .c-dialog__content {
     display: flex;
-    flex: 1;
+    flex: 1 0 auto;
     flex-direction: column;
     justify-content: center;
     max-width: (600px / $inuit-global-font-size) * 1em;
+    width: 100%;
     z-index: $zindex-dialog-overlay + 1;
   }
 

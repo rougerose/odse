@@ -3,7 +3,7 @@
     <div class="c-dialog__overlay c-dialog__overlay--site-nav" tabindex="-1" data-a11y-dialog-hide></div>
     <div class="c-dialog__content" role="dialog" aria-labelledby="dialogSearchBoxTitle">
       <div class="o-wrapper">
-        <button type="button" class="c-btn c-btn--close c-btn--flat js-btn-close" aria-label="Fermer" data-a11y-dialog-hide> </button>
+        <button type="button" class="c-btn c-btn--close c-btn---close-dialog c-btn--flat js-btn-close" aria-label="Fermer" data-a11y-dialog-hide> </button>
         <h2 id="dialogSearchBoxTitle" class="c-dialog__title c-dialog__title--site-nav u-hidden-visually"><:odse:site_nav_titre:></h2>
         <INCLURE{fond=inclure/nav/site-nav, variante=mobile} />
       </div>
@@ -13,7 +13,7 @@
   <div id="dialogSearchBox" class="c-dialog">
     <div class="c-dialog__overlay" tabindex="-1" data-a11y-dialog-hide></div>
     <div class="c-dialog__content" role="dialog" aria-labelledby="dialogSearchBoxTitle">
-      <button type="button" class="c-btn c-btn--close c-btn--flat js-btn-close" aria-label="Fermer" data-a11y-dialog-hide> </button>
+      <button type="button" class="c-btn c-btn--close c-btn--close-dialog c-btn--flat js-btn-close" aria-label="Fermer" data-a11y-dialog-hide> </button>
       <h2 id="dialogSearchBoxTitle" class="c-dialog__title"><:odse:rechercher_titre:></h2>
       [(#FORMULAIRE_RECHERCHE{'', 'large'})]
     </div>
