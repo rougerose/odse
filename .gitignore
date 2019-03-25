@@ -7,6 +7,5 @@ bower_components/
 css/*.map
 yarn.*
 yarn-error.log
-plugins/
 
 mes_options.php
