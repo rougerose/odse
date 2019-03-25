@@ -1,6 +1,6 @@
 <paquet
   prefix="odse_theme"
-  categorie="theme"
+  categorie="squelette"
   version="1.0.0"
   etat="dev"
   compatibilite="[3.2.3;3.2.*]"
