@@ -103,7 +103,7 @@ function libJs(cb) {
     .pipe(dest(options.js.dest));
 
   src(options.libJs.src.prive)
-    .pipe(concat('odse-lib.min.js'))
+    .pipe(concat('odse-prive-lib.min.js'))
     .pipe(dest(options.js.dest));
   cb();
 }

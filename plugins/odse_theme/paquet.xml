@@ -15,6 +15,6 @@
     <script type="public" source="javascript/lib.min.js" />
     <script type="public" source="javascript/odse.min.js" />
     <style type="prive" source="css/odse-prive.css" />
-    <script type="prive" source="javascript/odse-lib.min.js" />
+    <script type="prive" source="javascript/odse-prive-lib.min.js" />
   </spip>
 </paquet>
