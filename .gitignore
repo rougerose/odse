@@ -8,7 +8,4 @@ css/*.map
 yarn.*
 yarn-error.log
 
-plugins/
-!/plugins/odse_*
-
 mes_options.php
