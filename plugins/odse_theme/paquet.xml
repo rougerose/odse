@@ -1,8 +1,8 @@
 <paquet
   prefix="odse_theme"
   categorie="squelette"
-  version="1.0.0"
-  etat="dev"
+  version="1.1.0"
+  etat="test"
   compatibilite="[3.2.3;3.2.*]"
   logo="prive/themes/spip/images/ODSE-128.png"
 >
