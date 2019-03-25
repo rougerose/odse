@@ -16,7 +16,7 @@
   <necessite nom="adaptive_images" compatibilite="[1.9.2;]" />
   <necessite nom="medoc" compatibilite="[2.3.3;]" />
   <necessite nom="figure" compatibilite="[1.0.0;]" />
-  <necessite nom="critere_mots" compatibilite="[4.2.0;]" />
+  <necessite nom="critere_mots" compatibilite="[4.1.2;]" />
   <necessite nom="selections_editoriales" compatibilite="[1.8.10;]" />
   <necessite nom="pages" compatibilite="[1.4.0;]" />
   <utilise nom="porte_plume_intertitres" compatibilite="[1.1.2;]" />
