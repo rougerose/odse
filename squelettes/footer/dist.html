@@ -1,0 +1,13 @@
+<footer class="c-site__footer c-sf">
+  <h1 class="c-site__title"><span>#NOM_SITE_SPIP</span></h1>
+  <div class="o-wrapper">
+    <nav class="c-sf__nav">
+      <BOUCLE_page_contact(ARTICLES){page=contact}>
+        <a href="#URL_PAGE{contact}">#TITRE</a>
+      </BOUCLE_page_contact>
+      <BOUCLE_memtions(ARTICLES){page=mentions}>
+        <a href="#URL_PAGE{mentions}">#TITRE</a>
+      </BOUCLE_memtions>
+    </nav>
+  </div>
+</footer>

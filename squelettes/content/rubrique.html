@@ -1,0 +1,15 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+  <div class="o-wrapper">
+    <article class="c-rubrique">
+      <header class="c-rubrique__header">
+        <h1 class="c-rubrique__title t-color-#ID_RUBRIQUE">
+          [(#INCLURE{fond=images/icon-dot.svg, class=o-icon--titre-rubrique, id_rubrique})][ <span>(#TITRE)</span>]
+        </h1>
+        [<div class="c-rubrique__desc">
+          (#TEXTE)
+        </div>]
+      </header>
+      <INCLURE{fond=inclure/liste/articles_rubrique, id_rubrique, pagination='9', nom_pagination='_page', ajax, env} />
+    </article>
+  </div>
+</BOUCLE_rubrique>

@@ -1,0 +1,71 @@
+// =====================================
+// c-spip-text
+// =====================================
+
+//
+// Mise en forme des contenus texte de Spip.
+//
+
+  .c-spip-text {
+
+    // ----- paragraphes et blocs ----- //
+    p,
+    ul.spip,
+    ol.spip,
+    dl,
+    table,
+    .spip_code,
+    .spip_cadre {
+      @include font-size(18px);
+    }
+
+
+    &.c-article__texte--chapo p {
+      @include font-size(20px);
+
+      @include mq(m) {
+        @include font-size(22px);
+      }
+    }
+
+
+    &.c-article__ps p {
+      @include font-size(16px);
+    }
+
+
+    blockquote {
+      border-left: 2px solid $color-grey-200;
+      margin-left: 1em;
+      padding: 0 1em;
+      &,
+      & > * {
+        @include font-size(16px);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+
+    // ----- intertitres ----- //
+    .h2, .h3, .h4, .h5, .h6 {
+      margin-top: $spacing-unit-large;
+      color: $color-purple-700;
+      font-family: $font-text;
+      line-height: 1.2;
+    }
+
+    .h2 + .h3, .h3 + .h4, .h4 + .h5, .h5 + .h6 {
+      margin-top: $spacing-unit;
+    }
+
+    .h2 {
+      @include font-size(28px, false);
+    }
+
+    .h6 {
+      font-style: italic;
+    }
+  }

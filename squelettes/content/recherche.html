@@ -1,0 +1,56 @@
+<div class="o-wrapper">
+  #SET{articles, #ARRAY}
+  #SET{rubriques, #ARRAY}
+  #SET{documents, #ARRAY}
+  #SET{mots, #ARRAY}
+  #SET{total, ''}
+  <BOUCLE_articles(ARTICLES){recherche}{!par points}{lang}>
+    [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]</BOUCLE_articles>
+  <BOUCLE_documents(DOCUMENTS){recherche}{vu=non}{!par points}>
+    <BOUCLE_docs_article(documents_liens){id_document}{objet=article}>
+      [(#SET{documents, #GET{documents}|push{#ID_DOCUMENT}})]
+    </BOUCLE_docs_article>
+  </BOUCLE_documents>
+  <BOUCLE_mots(MOTS){recherche}{!par points}>
+    [(#SET{mots, #GET{mots}|push{#ID_MOT}})]</BOUCLE_mots>
+  [(#SET{total, #GET{articles}|count
+    |plus{#GET{documents}|count}
+    |plus{#GET{mots}|count}
+  })]
+  <article class="c-rubrique c-recherche">
+    <header class="c-rubrique__header">
+      <h1 class="c-rubrique__title t-color-999">
+        [(#INCLURE{fond=images/icon-dot.svg, class=o-icon--titre-rubrique, id_rubrique=999})] <span><:resultats_recherche:></span>
+      </h1>
+      <div class="c-rubrique__desc c-recherche__searchbox">
+        [(#FORMULAIRE_RECHERCHE{'', 'std'})]
+      </div>
+    </header>
+    <section class="c-recherche-resultats">
+      [(#GET{total}|=={0}|?{
+        <h2 class="c-recherche-resultats__titre"><:odse:rechercher_resultats_zero_info:></h2>,
+        <h2 class="c-recherche-resultats__titre">
+          [(#GET{total}|singulier_ou_pluriel{odse:rechercher_resultat_compte_info, odse:rechercher_resultats_compte_info, nb}) :]
+          [ <a class="spip_in" href="#articles">(#GET{articles}|count|singulier_ou_pluriel{odse:rechercher_resultat_articles_compte_info, odse:rechercher_resultats_articles_compte_info, nb})</a>][ <a href="#mots" class="spip_in">(#GET{mots}|count|singulier_ou_pluriel{odse:rechercher_resultat_mots_compte_info, odse:rechercher_resultat_mots_compte_info, nb})</a>][ <a href="#documents" class="spip_in">(#GET{documents}|count|singulier_ou_pluriel{odse:rechercher_resultat_documents_compte_info, odse:rechercher_resultats_documents_compte_info, nb})</a>]
+        </h2>
+      })]
+      <BOUCLE_condition_total(CONDITION){si #GET{total}|>{0}}>
+        <BOUCLE_condition_total_articles(CONDITION){si #GET{articles}|count|>{0}}>
+          <section id="articles" class="c-recherche-resultats__section c-rr c-rubrique__section">
+            <INCLURE{fond=inclure/liste/articles_recherche, items=#GET{articles}, ajax} />
+          </section>
+        </BOUCLE_condition_total_articles>
+        <BOUCLE_condition_total_mots(CONDITION){si #GET{mots}|count|>{0}}>
+          <section id="mots" class="c-recherche-resultats__section c-rr c-rubrique__section">
+            <INCLURE{fond=inclure/liste/mots_recherche, items=#GET{mots}, ajax} />
+          </section>
+        </BOUCLE_condition_total_mots>
+        <BOUCLE_condition_total_documents(CONDITION){si #GET{documents}|count|>{0}}>
+          <section id="documents" class="c-recherche-resultats__section c-rr c-rubrique__section">
+            <INCLURE{fond=inclure/liste/documents_recherche, items=#GET{documents}, ajax} />
+          </section>
+        </BOUCLE_condition_total_documents>
+      </BOUCLE_condition_total>
+    </section>
+  </article>
+</div>

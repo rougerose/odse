@@ -1,0 +1,76 @@
+// =====================================
+// c-rubrique
+// =====================================
+
+
+.c-rubrique {}
+
+
+  //
+  // c-rubrique__header
+  // -------------------------------------
+
+  .c-rubrique__header {
+    margin-bottom: $spacing-unit-large;
+  }
+
+
+    //
+    // c-rubrique__title
+    // -------------------------------------
+
+    .c-rubrique__title {
+      display: flex;
+      margin-bottom: 0;
+      @include font-size(28px, 1);
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &--center {
+        justify-content: center;
+      }
+    }
+
+
+    //
+    // c-rubrique__desc
+    // -------------------------------------
+
+    .c-rubrique__desc {
+      margin-top: $spacing-unit-large;
+      margin-bottom: $spacing-unit-large;
+      @include font-size(20px, 1.3);
+
+      &--narrow {
+        @include mq(m) {
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+
+    //
+    // c-rubrique__section / c-rs
+    // -------------------------------------
+
+    .c-rubrique__section {
+      margin-bottom: $spacing-unit-large;
+
+      & + & {
+        border-top: 1px dotted $color-recherche;
+        padding-top: $spacing-unit;
+      }
+    }
+
+
+    //
+    // c-rs__titre
+    // -------------------------------------
+
+    .c-rs__titre {
+      color: $color-recherche;
+      @include font-size(22px);
+      font-weight: bold;
+    }

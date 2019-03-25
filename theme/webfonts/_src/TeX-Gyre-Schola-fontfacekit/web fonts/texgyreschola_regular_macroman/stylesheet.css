@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'tex_gyre_scholaregular';
+    src: url('texgyreschola-regular-webfont.eot');
+    src: url('texgyreschola-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('texgyreschola-regular-webfont.woff2') format('woff2'),
+         url('texgyreschola-regular-webfont.woff') format('woff'),
+         url('texgyreschola-regular-webfont.ttf') format('truetype'),
+         url('texgyreschola-regular-webfont.svg#tex_gyre_scholaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

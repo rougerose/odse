@@ -1,0 +1,19 @@
+#SET{decalage_compteur, #ENV{debut_documents, 0}}
+#SET{url_doc, ''}
+<B_documents>
+  #ANCRE_PAGINATION
+  [<h2 class="c-rr__titre c-rs__titre">(#ENV{items}|count|singulier_ou_pluriel{odse:rechercher_resultat_documents_info, odse:rechercher_resultats_documents_info, nb})</h2>]
+  <ol class="spip c-rr__liste"[ style="counter-increment: item (#GET{decalage_compteur});"]>
+    <BOUCLE_documents(DOCUMENTS){id_document IN #ENV{items}}{pagination #ENV{pagination, 10}}>
+      [(#REM) <!-- calcul de l'url du document dans un article --> ]
+      <BOUCLE_lien_article(documents_liens){id_document}{objet=article}>
+        [(#SET{url_doc, #INFO_URL{article,#ID_OBJET}})]
+      </BOUCLE_lien_article>
+      <li class="c-rr__item c-rri">
+        [<h3 class="c-rri__titre"><a href="[(#GET{url_doc}|ancre_url{documents})]" class="spip_in c-rri__link">(#TITRE|sinon{#FICHIER|basename})</a></h3>]
+        [<div class="c-rri__desc"><p>(#DESCRIPTIF|PtoBR)</p></div>]
+      </li>
+    </BOUCLE_documents>
+  </ol>
+  [<nav class="c-pagination pagination">(#PAGINATION{page, label=page})</nav>]
+</B_documents>

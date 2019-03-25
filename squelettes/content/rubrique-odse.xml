@@ -1,0 +1,6 @@
+<composition>
+  <nom>Rubrique "Qui sommes-nous ?""</nom>
+  <description>Composition pour la rubrique "Qui sommes-nous ?"</description>
+  <icon>images/objet-liste-contenus.png</icon>
+  <branche type="article" composition="odse" />
+</composition>

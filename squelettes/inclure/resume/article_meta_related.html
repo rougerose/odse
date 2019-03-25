@@ -1,0 +1,13 @@
+<BOUCLE_meta_article_related(ARTICLES){id_article}>
+  <p class="c-article-resume__meta">
+    [<span class="c-article-resume__date">(#DATE|affdate)</span>]
+    <B_mots_article>
+      <span class="c-article-resume__tags c-tag-list">
+        <BOUCLE_mots_article(MOTS){id_article}{par titre}>
+          <span class="c-tag-list__item"><span>#TITRE</span></span>
+        </BOUCLE_mots_article>
+      </span>
+    </B_mots_article>
+  </p>
+  <p class="c-lien-plus"><:odse:savoir_plus_info:></p>
+</BOUCLE_meta_article_related>

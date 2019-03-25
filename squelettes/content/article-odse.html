@@ -1,0 +1,47 @@
+<BOUCLE_article_odse(ARTICLES){id_article}>
+  <div class="o-wrapper">
+    <article class="c-article">
+      <div class="c-article__container">
+        <aside class="c-article__meta">
+          <p class="c-article__date"><time datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
+        </aside>
+        <header class="c-article__header">
+          [<p class="c-article__surtitre t-color-#ID_SECTEUR">(#SURTITRE)</p>]
+          <h1 class="c-article__titre">#TITRE</h1>
+          [<p class="c-article__soustitre t-color-#ID_SECTEUR">(#SOUSTITRE)</p>]
+        </header>
+
+        [<figure class="c-article__logo">
+          (#LOGO_ARTICLE|adaptive_images{700})
+        </figure>]
+
+        [<div class="c-article__texte c-article__texte--chapo c-spip-text">
+          (#CHAPO|adaptive_images{700})
+        </div>]
+
+        [<div class="c-article__texte c-spip-text">
+          (#TEXTE|adaptive_images{700})
+        </div>]
+
+        [<div class="c-article__ps c-spip-text u-hr u-hr--top">
+          (#PS)
+        </div>]
+
+        <footer class="c-article__footer c-af">
+          <INCLURE{fond=inclure/liste/documents_article, id_article} />
+
+          <div class="o-grid">
+            [<div class="o-grid__cell u-1/2@m">
+              <section class="c-article__footnotes c-af__section u-hr u-hr--top">
+                <h2 class="c-af__title"><:info_notes:></h2>
+                (#NOTES)
+              </section>
+            </div>]
+
+          </div>
+        </footer>
+      </div>
+
+    </article>
+  </div>
+</BOUCLE_article_odse>

@@ -1,0 +1,23 @@
+<BOUCLE_rubrique_ODSE(RUBRIQUES){id_rubrique}>
+  <article class="c-rubrique-resume">
+    <a href="#URL_RUBRIQUE" class="c-rubrique-resume__link c-rubrique-resume__link--odse">
+      <div class="o-grid">
+        <div class="o-grid__cell u-1/3@l">
+          <header class="c-rubrique-resume__header">
+            <h2 class="c-rubrique-resume__titre">
+              [(#INCLURE{fond=images/icon-dot.svg, class='o-icon--titre-rubrique-resume', id_rubrique})][ <span>(#TITRE)</span>]
+            </h2>
+          </header>
+        </div>
+        [<div class="o-grid__cell u-2/3@l">
+          <div class="c-rubrique-resume__texte">
+            <div class="c-rubrique-resume__desc c-rubrique-resume__desc--odse">
+              (#DESCRIPTIF)
+            </div>
+            <p class="c-lien-plus"><:odse:savoir_plus_info:></p>
+          </div>
+        </div>]
+      </div>
+    </a>
+  </article>
+</BOUCLE_rubrique_ODSE>

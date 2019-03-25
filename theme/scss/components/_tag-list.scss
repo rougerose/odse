@@ -1,0 +1,41 @@
+// =====================================
+// c-tag-list
+// =====================================
+
+.c-tag-list {}
+
+
+//
+// c-tag__item
+// -------------------------------------
+
+.c-tag-list__item {
+  border: 1px solid $color-grey-300;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: $spacing-unit-tiny;
+  margin-bottom: $spacing-unit-tiny;
+  white-space: nowrap;
+  transition: all .5s ease;
+
+  > a,
+  > span {
+    display: inline-block;
+    padding: 0 $spacing-unit-tiny;
+  }
+
+  > a {
+    &:hover {
+      background-color: $color-link-text;
+    }
+  }
+
+  &.is-disabled {
+    border-color: $color-grey-200;
+    color: $color-grey-300;
+  }
+
+  &.is-selected {
+    border-color: $color-purple-500;
+  }
+}

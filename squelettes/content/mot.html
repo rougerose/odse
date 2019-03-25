@@ -1,0 +1,16 @@
+<BOUCLE_mot(MOTS){id_mot}>
+  <div class="o-wrapper">
+    <article class="c-rubrique">
+      <header class="c-rubrique__header">
+        <h1 class="c-rubrique__title c-rubrique__title--center t-color-999">
+          [(#INCLURE{fond=images/icon-dot.svg, class=o-icon--titre-rubrique, id_rubrique=999})][ <span>(#TITRE)</span>]
+        </h1>
+        [<div class="c-rubrique__desc c-rubrique__desc--narrow">
+          (#TEXTE)
+        </div>]
+      </header>
+      <INCLURE{fond=inclure/liste/articles_mot, pagination='10', nom_pagination=_articles, id_mot, ajax, env} />
+      <INCLURE{fond=inclure/liste/rubriques_mot, pagination='5', nom_pagination=_rubriques,  id_mot, ajax, env} />
+    </article>
+  </div>
+</BOUCLE_mot>

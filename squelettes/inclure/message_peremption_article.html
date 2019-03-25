@@ -1,0 +1,9 @@
+<BOUCLE_article_message_peremption(ARTICLES){id_article}>
+  <div class="c-article__message-peremption">
+    <p class="c-message-peremption c-message c-message--info">
+      <span class="c-message__title"><:odse:article_message_peremption_titre:></span>
+      [(#SET{delai, [(#ENV{date}|annee|moins{#DATE|annee})]})]
+      <span class="c-message__text">[(#GET{delai}|singulier_ou_pluriel{odse:article_message_peremption_singulier, odse:article_message_peremption_pluriel})]</span>
+    </p>
+  </div>
+</BOUCLE_article_message_peremption>

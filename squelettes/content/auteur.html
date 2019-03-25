@@ -1,0 +1,16 @@
+<BOUCLE_auteur(AUTEURS){id_auteur}>
+  <div class="o-wrapper">
+    <article class="c-rubrique">
+      <header class="c-rubrique__header">
+        <h1 class="c-rubrique__title c-rubrique__title--center t-color-999">
+          [(#NOM)]
+        </h1>
+        <div class="c-rubrique__desc c-rubrique__desc--narrow">
+          [(#BIO)]
+          [<a href="#URL_SITE" class="spip_out">(#NOM_SITE)</a>]
+        </div>
+      </header>
+      <INCLURE{fond=inclure/liste/articles_auteur, pagination='10', nom_pagination=_articles, id_auteur, ajax, env} />
+    </article>
+  </div>
+</BOUCLE_auteur>

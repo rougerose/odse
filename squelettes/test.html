@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="#CHEMIN{css/odse.css}">
+  </head>
+  <body>
+    <div class="o-wrapper">
+      <div class="o-grid">
+        #SET{selection, #ARRAY}
+        #SET{somme_logo, 0} #SET{test_logo, 0}
+        <BOUCLE_selections(ARTICLES){!par date}{id_rubrique IN 1,4}{0,6}>
+          [(#SET{test_logo, [(#LOGO_ARTICLE|?{1,0})]})]
+          [(#SET{somme_logo, #GET{somme_logo}|plus{#GET{test_logo}}})]
+
+          [(#REM)
+            <!-- Constituer la série de sélections à afficher --> ]
+          [(#SET{selection, #GET{selection}|push{#ID_ARTICLE}})]
+
+          [(#COMPTEUR_BOUCLE|modulo{3}|=={0}|oui)
+            [(#REM)
+              <!-- Test de la présence de logo(s) pour cette série -->
+            ][(#GET{somme_logo}|=={0}|?{#SET{logo, 0}, #SET{logo, 1}})]
+            [(#INCLURE{fond=inclure/liste/selections_sommaire_automatique, selection=#GET{selection}, logo=#GET{logo}})]
+
+            [(#REM)
+              <!-- Max de sélections dans une rangée est atteint,
+              les compteurs sont remis à zéro -->
+            ]
+            #SET{compteur, 0} #SET{test_logo, 0} #SET{somme_logo, 0}
+            #SET{selection, #ARRAY}
+          ]
+          [(#REM)
+            <!-- Incrémenter le compteur --> ]
+          [(#SET{compteur, #GET{compteur}|plus{1}})]
+        </BOUCLE_selections>
+      </div>
+    </div>
+  </body>
+</html>

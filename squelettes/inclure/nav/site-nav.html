@@ -1,0 +1,24 @@
+<B_rubriques_principales>
+  <div id="[sitenavMenu(#ENV{variante, mobile}|ucfirst)]" class="c-sn__menu [c-sn__menu--(#ENV{variante, mobile})]">
+    <ul class="o-list-bare c-sn-menu__list [c-sn-menu__list--(#ENV{variante, mobile})]">
+      <BOUCLE_rubriques_principales(RUBRIQUES){par num titre, titre}{profondeur=0}>
+        <li class="o-list-bare__item c-sn-menu__item [c-sn-menu__item--(#ENV{variante, mobile})]">
+          <a href="#URL_RUBRIQUE" class="c-sn-menu__link [c-sn-menu__link--(#ENV{variante, mobile})][ (#ENV{id_rubrique}|=={#ID_RUBRIQUE}|oui)is-selected t-color-#ID_RUBRIQUE]">
+            [(#SET{class, [o-icon--menu o-icon--menu-(#ENV{variante, mobile})]})]
+            [(#INCLURE{fond=images/icon-dot.svg, class=#GET{class}, id_rubrique})]
+            <span>#TITRE</span>
+          </a>
+        </li>
+      </BOUCLE_rubriques_principales>
+    </ul>
+    <div class="c-sn-menu__search [c-sn-menu__search--(#ENV{variante, mobile})]">
+      [(#ENV{variante}|=={large}|oui)
+        <button type="button" class="c-btn c-btn--search c-btn--flat js-search-box-toggle" aria-label="Search" data-a11y-dialog-show="dialogSearchBox">
+          #INCLURE{fond=images/icon-search.svg, variante=large}
+        </button>
+      ][(#ENV{variante}|=={mobile}|oui)
+        [(#FORMULAIRE_RECHERCHE{'', 'mobile'})]
+      ]
+    </div>
+  </div>
+</B_rubriques_principales>

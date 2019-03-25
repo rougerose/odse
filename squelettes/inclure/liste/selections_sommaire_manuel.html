@@ -1,0 +1,38 @@
+[(#REM)
+  Mise en forme des sélections
+  ----------------------------
+
+  Si la série contient au moins un logo, la taille maximum de la sélection
+  est de u-1/2.
+  Les sélections ne contenant pas de logo dans cette série seront d'une taille
+  maximum de 1/4.
+
+  Si la série ne contient aucun logo, la taille maximum de chaque sélection
+  est de u-1/3.
+]
+<BOUCLE_selections_sommaire_manuel(SELECTIONS_CONTENUS){id_selection}{id_selections_contenu IN #ENV{selection}}>
+  [(#ENV{logo}|oui)
+    [(#LOGO_SELECTIONS_CONTENUS|?{
+      #SET{class, u-1/2@l},
+      #SET{class, u-1/4@l}
+    })]
+  ][(#ENV{logo}|non) #SET{class, u-1/3@l} ]
+  <div class="o-grid__cell u-1/2@m[ (#GET{class}) ]u-flex">
+    <article class="c-article-resume u-flex">
+      <a href="#URL" class="c-article-resume__link">
+        <header class="c-article-resume__header">
+          <h2 class="c-article-resume__titre">#TITRE</h2>
+        </header>
+        <div class="c-article-resume__texte">
+          [<div class="c-article-resume__desc">
+            (#DESCRIPTIF)
+          </div>]
+          <p class="c-lien-plus"><:odse:savoir_plus_info:></p>
+        </div>
+        [<figure class="c-article-resume__logo">(#LOGO_SELECTIONS_CONTENUS|adaptive_images{#ENV{logo_size, 540}})</figure>]
+      </a>
+    </article>
+  </div>
+</BOUCLE_selections_sommaire_manuel>
+  <INCLURE{fond=inclure/selection/sommaire_automatique} />
+<//B_selections_sommaire_manuel>
