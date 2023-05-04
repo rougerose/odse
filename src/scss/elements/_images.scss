@@ -1,0 +1,14 @@
+// =====================================
+// img
+// =====================================
+
+
+//
+// Complément de inuitcss/elements/elements.images
+//
+
+@if ($inuit-static-images == false) {
+
+  img {height: auto;}
+
+}

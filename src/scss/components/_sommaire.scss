@@ -1,0 +1,33 @@
+// =====================================
+// c-sommaire
+// =====================================
+
+.c-sommaire {}
+
+
+//
+// c-sommaire__section
+// -------------------------------------
+
+.c-sommaire__section {
+  margin-bottom: $spacing-unit-large;
+
+  @include mq(l) {
+    margin-bottom: $spacing-unit-huge;
+  }
+
+  &--odse {
+    padding: $spacing-unit $spacing-unit-small;
+    background: $color-purple-800;
+    background: linear-gradient(180deg, $color-purple-900 60%, $color-odse 100%);
+    color: $color-white;
+
+    @include mq(m) {
+      padding: $spacing-unit-large $spacing-unit;
+    }
+  }
+
+  &--actualites {
+    margin-bottom: $spacing-unit;
+  }
+}

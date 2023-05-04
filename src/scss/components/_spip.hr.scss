@@ -1,0 +1,12 @@
+// =====================================
+// hr.spip
+// =====================================
+
+
+hr.spip {
+  border: 0;
+  margin: $spacing-unit-large 0;
+  height: 1px;
+  background: $color-purple-800;
+  background: linear-gradient(to right, $color-white 0%, $color-purple-800 50%, $color-white 100%);
+}

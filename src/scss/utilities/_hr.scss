@@ -1,0 +1,47 @@
+// =====================================
+// u-hr
+// =====================================
+
+$hr-color: $color-grey-400;
+
+.u-hr {
+  position: relative;
+
+  &--top {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background: $hr-color;
+      background: linear-gradient(to right, $color-white 0%, $hr-color 50%, $color-white 100%);
+    }
+  }
+
+  &--both {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background: $hr-color;
+      background: linear-gradient(to right, $color-white 0%, $hr-color 50%, $color-white 100%);
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}

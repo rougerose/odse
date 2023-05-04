@@ -1,0 +1,42 @@
+// =====================================
+// c-filtres
+// =====================================
+
+
+.c-filtres {
+  border: 1px solid $color-grey-300;
+  border-radius: 3px;
+  margin-bottom: $spacing-unit-large;
+  padding: $spacing-unit-tiny;
+}
+
+
+  //
+  // c-filtres__title
+  // -------------------------------------
+
+  .c-filtres__title {
+    margin-bottom: $spacing-unit-small;
+    @include font-size(16px);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+
+  //
+  // c-filtres-list
+  // -------------------------------------
+
+  .c-filtres-list {
+    margin-bottom: $spacing-unit-tiny;
+
+    &--select {
+      border-bottom: 1px dotted $color-grey-400;
+      padding-bottom: $spacing-unit-small;
+      margin-bottom: $spacing-unit-small;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }

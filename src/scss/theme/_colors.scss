@@ -1,0 +1,19 @@
+// =====================================
+// t-color
+// =====================================
+
+@each $ID, $color  in $colorIDs {
+  .t-color-#{$ID} {
+    color: $color;
+  }
+
+  .t-brcolor-#{$ID} {
+    border-color: $color;
+  }
+}
+
+@each $ID, $color  in $colorDarkIDs {
+  .t-color-dark-#{$ID} {
+    color: $color;
+  }
+}

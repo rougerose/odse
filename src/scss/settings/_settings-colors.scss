@@ -1,0 +1,112 @@
+// =====================================
+// settings: colors
+// =====================================
+
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 100%, 100%);
+
+$color-red-50: #ffebee;
+$color-red-100: #ffcdd2;
+$color-red-200: #ef9a9a;
+$color-red-300: #e57373;
+$color-red-400: #e57373;
+$color-red-500: #f44336;
+$color-red-600: #e53935;
+$color-red-700: hsl(0, 65%, 51%);
+$color-red-800: #c62828;
+$color-red-900: #b71c1c;
+
+$color-orange-50: hsla(26, 72%, 94%, 1);
+$color-orange-100: hsla(25, 72%, 86%, 1);
+$color-orange-200: hsla(26, 73%, 77%, 1);
+$color-orange-300: hsla(26, 74%, 67%, 1);
+$color-orange-400: hsla(26, 73%, 60%, 1);
+$color-orange-500: hsla(26, 73%, 53%, 1);
+$color-orange-600: hsla(25, 71%, 51%, 1);
+$color-orange-700: hsla(23, 71%, 49%, 1);
+$color-orange-800: hsla(21, 75%, 47%, 1);
+$color-orange-900: hsla(18, 83%, 43%, 1);
+
+$color-purple-50: #f0e0f0;
+$color-purple-100: #d8b3d9;
+$color-purple-200: #bf80c0;
+$color-purple-300: #a54da6;
+$color-purple-400: #912693;
+$color-purple-500: #7e0080;
+$color-purple-600: #760078;
+$color-purple-700: #6b006d;
+$color-purple-800: #610063;
+$color-purple-900: #4e0050;
+
+$color-grey-50: hsl(0,0%,98%);
+$color-grey-100: hsl(0,0%,96%);
+$color-grey-200: hsl(0,0%,93%);
+$color-grey-300: hsl(0,0%,88%);
+$color-grey-400: hsl(0,0%,74%);
+$color-grey-500: hsl(0,0%,62%);
+$color-grey-600: hsl(0,0%,46%);
+$color-grey-700: hsl(0,0%,38%);
+$color-grey-800: hsl(0,0%,26%);
+$color-grey-900: hsl(0,0%,13%);
+
+$color-blue-grey-50: #eceff1;
+$color-blue-grey-100: #cfd8dc;
+$color-blue-grey-200: #b0bec5;
+$color-blue-grey-300: #90a4ae;
+$color-blue-grey-400: #78919c;
+$color-blue-grey-500: #607d8b;
+$color-blue-grey-600: #587583;
+$color-blue-grey-700: #4e6a78;
+$color-blue-grey-800: #44606e;
+$color-blue-grey-900: #334d5b;
+
+$color-olive-900: #77ad14;
+$color-olive-800: #88b920;
+$color-olive-700: #91c027;
+$color-olive-600: #9bc72e;
+$color-olive-500: #a3cc33;
+$color-olive-400: #b1d452;
+$color-olive-300: #bfdb70;
+$color-olive-200: #d1e699;
+$color-olive-100: #e3f0c2;
+$color-olive-50: #f4f9e7;
+
+
+//
+// Couleurs identitaires ODSE
+// -------------------------------------
+$color-odse:      $color-purple-500;
+$color-informer:  $color-orange-500;
+$color-actions:   $color-red-500;
+$color-actualites: $color-olive-500;
+$color-recherche: $color-blue-grey-500;
+
+// Variantes sombres
+$color-odse-dark: $color-purple-700;
+$color-informer-dark: $color-orange-700;
+$color-actions-dark: $color-red-700;
+$color-actualites-dark: $color-olive-800;
+
+
+$colorIDs: (36, $color-informer), (3, $color-odse), (37, $color-actions), (38, $color-actualites), (999, $color-recherche) !default;
+
+$colorDarkIDs: (36, $color-informer-dark), (3, $color-odse-dark), (37, $color-actions-dark), (38, $color-actualites-dark) !default;
+
+//
+// Liens
+// -------------------------------------
+$color-link-text: $color-purple-100;
+
+
+//
+// Overlay
+// -------------------------------------
+$color-dialog-overlay-default: rgba(255,255,255, 0.95);
+$color-dialog-overlay-site-nav: rgba(0,0,0, 0.95);
+
+
+//
+// Messages
+// -------------------------------------
+$color-bg-message-info: $color-orange-100;
+$color-message-info: $color-orange-600;
