@@ -62,5 +62,5 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
   'site_nav_titre' => "Menu",
 
   // T
-  'titre_page_configurer_odse_squelettes' => "Configurer",
+  'titre_page_configurer_odse' => "Configurer le plugin ODSE",
 );

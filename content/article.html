@@ -5,7 +5,7 @@
       <div class="c-article__container">
         <aside class="c-article__meta">
           <p class="c-article__date"><time datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
-          <BOUCLE_test_peremption(CONDITION){si #DATE|odse_squelettes_verifier_peremption_article}>
+          <BOUCLE_test_peremption(CONDITION){si #DATE|odse_verifier_peremption_article}>
             <INCLURE{fond=inclure/message_peremption_article, id_article} />
           </BOUCLE_test_peremption>
         </aside>

@@ -9,8 +9,8 @@ if (!defined("_ECRIRE_INC_VERSION")) {
  * Afficher le délai à partir duquel un article est considéré comme périmé.
  * @return int délai exprimé en mois.
  */
-function odse_squelettes_afficher_delai_peremption_articles() {
-  $config = unserialize($GLOBALS['meta']['odse_squelettes']);
+function odse_afficher_delai_peremption_articles() {
+  $config = unserialize($GLOBALS['meta']['odse']);
   if (isset($config['articles_delai_peremption'])) {
     $config = $config['articles_delai_peremption'];
   } else {
@@ -27,8 +27,8 @@ function odse_squelettes_afficher_delai_peremption_articles() {
  * @param  string $date
  * @return bool
  */
-function odse_squelettes_verifier_peremption_article($date) {
-  $delai = odse_squelettes_afficher_delai_peremption_articles();
+function odse_verifier_peremption_article($date) {
+  $delai = odse_afficher_delai_peremption_articles();
 
   $date_peremption = new DateTime("now - $delai months");
 
