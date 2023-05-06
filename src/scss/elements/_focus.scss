@@ -1,0 +1,19 @@
+// Focus
+// @link https://alistairshepherd.uk/writing/focus-visible-conditional-polyfill/
+
+:focus {
+  outline: 2px solid $color-odse;
+  outline-offset: 2px;
+}
+
+// When focus-visible is supported:
+// remove outline when :focus but not :focus-visible
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+// When polyfill loaded:
+// remove outline when :focus but not .focus-visible
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}

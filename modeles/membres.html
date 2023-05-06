@@ -1,0 +1,38 @@
+<B_sites>
+  <aside class="c-membres">
+    [<h2 class="h2 c-membres__titre">(#ENV{titre})</h2>]
+    <div id="membres" class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="o-list-bare c-membres__liste glide__slides">
+          <BOUCLE_sites(SITES){id_rubrique=3}{par nom_site}{tout}>
+            [(#SET{alt, #NOM_SITE|attribut_html})]
+            <li class="o-list-bare__item c-membres__item glide__slide">
+              [<a href="(#URL_SITE)" class="c-membres__lien">
+                [<span class="c-membres__logo">
+                  (#LOGO_SITE
+                    |inserer_attribut{alt, #GET{alt}}
+                    |sinon{#CHEMIN_IMAGE{ODSE-128.png}|balise_img{#GET{alt}}}
+                    |image_reduire{128,128}
+                    |image_passe_partout{64,64})
+                </span>]
+                [<h3 class="c-membres__nom">(#NOM_SITE)</h3>]
+              </a>]
+            </li>
+          </BOUCLE_sites>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">[(#INCLURE{fond=images/icon-chevronLeft.svg})]</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">[(#INCLURE{fond=images/icon-chevronRight.svg})]</button>
+      </div>
+    </div>
+    <script>
+      var glide = new Glide('#membres', {
+        type: 'carousel',
+        perView: 4,
+        breakpoints: {500: {perView: 2}}
+      });
+      glide.mount();
+    </script>
+  </aside>
+</B_sites>

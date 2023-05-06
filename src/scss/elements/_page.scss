@@ -1,0 +1,17 @@
+// =====================================
+// page
+// =====================================
+
+html {
+  // styles repris de inuitcss/elements/_page
+  // mais sans la règle [2] qui rentre en collision avec le style ajouté
+  // par le js body-scroll-lock
+  font-size: ($inuit-global-font-size / 16px) * 1em; /* [1] */
+  line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
+  //overflow-y: scroll; /* [2] */
+  min-height: 100%; /* [3] */
+
+  &[aria-hidden="true"] {
+    overflow: inherit;
+  }
+}

@@ -1,0 +1,29 @@
+<paquet
+	prefix="odse"
+	version="2.0.0"
+	etat="dev"
+	compatibilite="[4.1.0;4.1.*]"
+	logo="prive/themes/spip/images/ODSE-128.png"
+	documentation=""
+>
+	<nom>ODSE : squelettes et thème graphique</nom>
+	<!-- slogan paquet -->
+	<auteur lien='http:rouge-rose.net'>christophe le drean</auteur>
+	<licence>GNU/GPL</licence>
+  <necessite nom="zcore" compatibilite="[3.0.4;[" />
+  <necessite nom="saisies" />
+  <necessite nom="compositions" compatibilite="[3.9.4;]" />
+  <necessite nom="roles_documents" compatibilite="[2.0.5;]" />
+  <necessite nom="adaptive_images" compatibilite="[3.0.13;]" />
+  <necessite nom="critere_mots" compatibilite="[4.3.6;]" />
+  <necessite nom="selections_editoriales" compatibilite="[2.0.5;]" />
+  <necessite nom="pages" compatibilite="[2.0.0;]" />
+  <utilise nom="porte_plume_intertitres" />
+  <utilise nom="suivant_precedent" />
+  <utilise nom="metasplus" />
+  <utilise nom="bellespuces" />
+  <spip compatibilite="[4.1.0;4.1.*]">
+    <style type="prive" source="dist/css/odse-prive.css" />
+    <script type="prive" source="dist/js/lib/glide.min.js" />
+  </spip>
+</paquet>
