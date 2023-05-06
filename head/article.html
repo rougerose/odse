@@ -1,0 +1,5 @@
+<BOUCLE_article_head(ARTICLES){id_article}>
+  <title>[(#TITRE|textebrut)][ | (#NOM_SITE_SPIP|textebrut)]</title>
+  [<meta name="description" content="(#DESCRIPTIF|sinon{#INTRODUCTION|couper{200}}|textebrut)" />]
+  [<link rel="canonical" href="(#URL_ARTICLE|url_absolue)"/>]
+</BOUCLE_article_head>
