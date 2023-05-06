@@ -10,9 +10,11 @@
     position: relative;
   }
 
-  &--mobile {}
+  &--mobile {
+  }
 
-  &--large {}
+  &--large {
+  }
 }
 
 //
@@ -21,10 +23,11 @@
 
 .c-search-box__group {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 
   label {
-    position: absolute;
-    z-index: $zindex-dialog-overlay + 1;
+    // z-index: $z-index-dialog-overlay + 1;
     color: $color-grey-500;
     font-family: $font-heading;
     text-transform: uppercase;
@@ -32,41 +35,45 @@
   }
 
   input.search {
-    border-width: 0;
-    border-bottom: 1px solid $color-grey-500;
-    flex: 1;
+    border: 1px solid $color-grey-500;
+    border-radius: 4px;
+    // border-width: 0;
+    // border-bottom: 1px solid $color-grey-500;
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 66%;
     position: relative;
-    z-index: $zindex-dialog-overlay + 2;
+    z-index: $z-index-dialog-overlay + 2;
     background-color: transparent;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
-    &:focus,
-    &.is-filled {
-      + .c-btn--search {
-        background-color: $color-odse;
+    // &:focus,
+    // &.is-filled {
+    //   + .c-btn--search {
+    //     background-color: $color-odse;
 
-        > .o-icon--search {
-          fill: $color-white;
-        }
-      }
-    }
+    //     > .o-icon--search {
+    //       fill: $color-white;
+    //     }
+    //   }
+    // }
   }
 
   .c-btn--search {
-    margin-left: $spacing-unit-tiny;
+    // margin-left: $spacing-unit-tiny;
+    flex-grow: 1;
   }
 
   &--mobile {
-
     input.search {
       color: $color-white;
-      z-index: $zindex-dialog-overlay + 2;
+      z-index: $z-index-dialog-overlay + 2;
 
-      &:focus,
-      &.is-filled {
-        background-color: $color-black;
-        border-bottom-color: $color-white;
-      }
+      // &:focus,
+      // &.is-filled {
+      //   background-color: $color-black;
+      //   border-bottom-color: $color-white;
+      // }
     }
   }
 
@@ -79,21 +86,23 @@
       color: $color-black;
       @include font-size(20px);
 
-      &:focus,
-      &.is-filled {
-        border-bottom-color: $color-black;
-      }
+      // &:focus,
+      // &.is-filled {
+      //   border-bottom-color: $color-black;
+      // }
     }
   }
 
   &--std {
     label,
     input.search {
-      z-index: $zindex-dialog-overlay - 1;
+      z-index: $z-index-dialog-overlay - 1;
     }
   }
 
-  &.is-filled {
-    label {color: transparent;}
-  }
+  // &.is-filled {
+  //   label {
+  //     color: transparent;
+  //   }
+  // }
 }

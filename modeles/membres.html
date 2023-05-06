@@ -26,14 +26,13 @@
         <button class="glide__arrow glide__arrow--right" data-glide-dir=">">[(#INCLURE{fond=images/icon-chevronRight.svg})]</button>
       </div>
     </div>
+    <script>
+      var glide = new Glide('#membres', {
+        type: 'carousel',
+        perView: 4,
+        breakpoints: {500: {perView: 2}}
+      });
+      glide.mount();
+    </script>
   </aside>
 </B_sites>
-<script>
-  var glide = new Glide('#membres', {
-    type: 'carousel',
-    perView: 4,
-    // focusAt: 'center',
-    breakpoints: {500: {perView: 2}}
-  });
-  glide.mount();
-</script>

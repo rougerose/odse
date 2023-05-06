@@ -13,7 +13,7 @@
     </ul>
     <div class="c-sn-menu__search [c-sn-menu__search--(#ENV{variante, mobile})]">
       [(#ENV{variante}|=={large}|oui)
-        <button type="button" class="c-btn c-btn--search c-btn--flat js-search-box-toggle" aria-label="Search" data-a11y-dialog-show="dialogSearchBox">
+        <button type="button" class="c-btn c-btn--search-trigger c-btn--flat js-search-box-toggle" aria-label="Search" data-a11y-dialog-show="dialogSearchBox">
           #INCLURE{fond=images/icon-search.svg, variante=large}
         </button>
       ][(#ENV{variante}|=={mobile}|oui)

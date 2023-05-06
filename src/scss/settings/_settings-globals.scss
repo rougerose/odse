@@ -6,13 +6,13 @@
 // inuitcss
 // -------------------------------------
 $global-radius: 4px !default;
-$global-transition: all .3s ease-in-out !default;
+$global-transition: all 0.3s ease-in-out !default;
 $inuit-fractions: 1 2 3 4 !default;
 $inuit-wrapper-width: 1200px;
 $inuit-static-images: false;
 
 //
-// mediaqueries
+// media queries
 // -------------------------------------
 // $mq-breakpoints: (
 //   xs: 320px, // 20em
@@ -24,7 +24,12 @@ $inuit-static-images: false;
 // );
 
 // Les valeurs les plus fréquentes
-$mq-breakpoints: (s: 320px, m: 640px, l: 768px, xl: 1024px);
+$mq-breakpoints: (
+  s: 320px,
+  m: 640px,
+  l: 768px,
+  xl: 1024px,
+);
 
 // Les valeurs utilisées ponctuellement
 $mq-sm: 439px;
@@ -34,15 +39,15 @@ $mq-xxl: 1200px;
 // ODSE
 // -------------------------------------
 
-  // ----- font ----- //
-  $font-text: 'texgyreschola';
-  $font-heading: 'texgyreadventor';
-  $font-monospace: monospace;
+// ----- font ----- //
+$font-text: "texgyreschola";
+$font-heading: "texgyreadventor";
+$font-monospace: monospace;
 
-  // ----- transitions ----- //
-  $transition-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+// ----- transitions ----- //
+$transition-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
-  // ----- z-index ----- //
-  $zindex-dialog-overlay: 100;
-  $zindex-site-nav: 80;
-  $zindex-spip-admin-float: 200;
+// ----- z-index ----- //
+$z-index-dialog-overlay: 100;
+$z-index-site-nav: 80;
+$z-index-spip-admin-float: 200;

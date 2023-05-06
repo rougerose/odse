@@ -8,4 +8,15 @@
   </main>
   <INCLURE{fond=aside/#ENV{type-page}, env} />
   <INCLURE{fond=footer/#ENV{type-page}, env} />
+  [(#REM)
+		<!-- https://alistairshepherd.uk/writing/focus-visible-conditional-polyfill/ -->
+	]<script>
+		try {
+			document.body.querySelector(':focus-visible');
+		} catch (error) {
+			var script = document.createElement('script');
+			script.src = "[(#CHEMIN{dist/js/lib/focus-visible.js}|timestamp)]";
+			document.body.appendChild(script);
+		}
+	</script>
 </body>

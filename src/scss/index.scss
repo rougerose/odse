@@ -18,8 +18,9 @@
 @import "../../node_modules/inuitcss/generic/generic.shared";
 
 // ELEMENTS
+@import "elements/focus";
 @import "elements/webfonts";
-@import "../../node_modules/inuitcss/elements/elements.page";
+// @import "../../node_modules/inuitcss/elements/elements.page";
 @import "elements/page";
 @import "../../node_modules/inuitcss/elements/elements.headings";
 @import "elements/headings";

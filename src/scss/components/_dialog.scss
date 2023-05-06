@@ -2,7 +2,6 @@
 // c-dialog
 // =====================================
 
-
 .c-dialog {
   display: flex;
   justify-content: center;
@@ -11,7 +10,7 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: $zindex-dialog-overlay;
+  z-index: $z-index-dialog-overlay;
 
   &[aria-hidden="true"] {
     display: none;
@@ -19,52 +18,62 @@
 
   &:not([aria-hidden="true"]) {
     > .c-dialog__overlay {
-      animation: fade-in .5s 1 both;
+      animation: fade-in 0.5s 1 both;
     }
   }
 }
 
-  //
-  // c-dialog__overlay
-  // -------------------------------------
+//
+// c-dialog__overlay
+// -------------------------------------
 
-  .c-dialog__overlay {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: $zindex-dialog-overlay;
-    background-color: $color-dialog-overlay-default;
+.c-dialog__overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: $z-index-dialog-overlay;
+  background-color: $color-dialog-overlay-default;
 
-    &--site-nav {
-      background-color: $color-dialog-overlay-site-nav;
-    }
+  &--site-nav {
+    background-color: $color-dialog-overlay-site-nav;
   }
+}
 
+//
+// c-dialog__content
+// -------------------------------------
 
-  //
-  // c-dialog__content
-  // -------------------------------------
+.c-dialog__content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  max-width: (600px / $inuit-global-font-size) * 1em;
+  width: 100%;
+  z-index: $z-index-dialog-overlay + 1;
 
-  .c-dialog__content {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    max-width: (600px / $inuit-global-font-size) * 1em;
-    width: 100%;
-    z-index: $zindex-dialog-overlay + 1;
+  &--search {
+    background-color: $color-white;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%), 0 3px 6px rgb(0 0 0 / 30%);
+    margin: auto;
+    padding: 4rem 2rem;
+    position: relative;
   }
+}
 
+//
+// c-dialog__title
+// -------------------------------------
 
-    //
-    // c-dialog__title
-    // -------------------------------------
+.c-dialog__title {
+  color: $color-grey-500;
+  font-family: $font-heading;
+  @include font-size(22px);
+  text-align: center;
 
-    .c-dialog__title {
-      color: $color-grey-500;
-      font-family: $font-heading;
-      @include font-size(22px);
-      text-align: center;
-    }
+  .c-dialog__content--search & {
+    color: $color-black;
+  }
+}
