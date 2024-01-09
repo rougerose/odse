@@ -1,8 +1,8 @@
 <paquet
 	prefix="odse"
-	version="2.0.1"
+	version="2.0.2"
 	etat="stable"
-	compatibilite="[4.1.0;4.1.*]"
+	compatibilite="[4.1.0;4.2.*]"
 	logo="prive/themes/spip/images/ODSE-128.png"
 	documentation=""
 >
@@ -22,7 +22,7 @@
   <utilise nom="suivant_precedent" />
   <utilise nom="metasplus" />
   <utilise nom="bellespuces" />
-  <spip compatibilite="[4.1.0;4.1.*]">
+  <spip compatibilite="[4.1.0;4.2.*]">
     <style type="prive" source="dist/css/odse-prive.css" />
     <script type="prive" source="dist/js/lib/glide.min.js" />
   </spip>
