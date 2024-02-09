@@ -5,14 +5,19 @@
 
 .c-pagination {
   padding: $spacing-unit-large 0 $spacing-unit;
-  text-align: center;
+  // text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: $spacing-unit-small;
+  flex-wrap: wrap;
 
   // ----- pagination spip ----- //
 
-  .label {
-    display: inline-block;
-    margin-right: $spacing-unit-tiny;
-  }
+  // .label {
+  //   display: inline-block;
+  //   padding: $spacing-unit-small $spacing-unit-tiny;
+  //   // margin-right: $spacing-unit-tiny;
+  // }
 
   // ----- pagination spip ----- //
 
@@ -22,103 +27,147 @@
   }
 
   &--previous-next {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    --switcher-gap: #{$spacing-unit-small};
   }
 }
 
 
-  //
-  // c-pagination__item
-  // -------------------------------------
+//
+// c-pagination__item
+// -------------------------------------
 
-  .c-pagination__item {
-    display: flex;
-    margin: 0 $spacing-unit-small;
-    transition: color .5s ease;
+.c-pagination__item {
+  display: flex;
+  transition: color .5s ease;
 
-    &.is-disabled {
-      color: $color-grey-400;
-      cursor: not-allowed;
-    }
+  &.is-disabled {
+    color: $color-grey-400;
+    cursor: not-allowed;
   }
 
-  a.c-pagination__item {
-    &:hover {
-      color: $color-link-text;
-    }
+  &--next {
+    justify-content: flex-end;
+  }
+}
+
+a.c-pagination__item {
+  &:hover {
+    color: $color-link-text;
+  }
+}
+
+
+//
+// c-pagination__icon
+// -------------------------------------
+
+.c-pagination__icon {
+  align-self: center;
+  background-color: transparent;
+  border-radius: 50%;
+  fill: currentColor;
+  transition: transform .5s ease, background-color .5s ease;
+
+  &--previous {
+    margin-right: $spacing-unit;
   }
 
+  &--next {
+    margin-left: $spacing-unit;
+  }
 
-    //
-    // c-pagination__icon
-    // -------------------------------------
+  a.c-pagination__item:hover & {
+    background-color: $color-link-text;
+    fill: $color-black;
 
-    .c-pagination__icon {
-      align-self: center;
-      background-color: transparent;
-      border-radius: 50%;
-      fill: currentColor;
-      transition: transform .5s ease, background-color .5s ease;
-
-      &--previous {
-        margin-right: $spacing-unit;
-      }
-
-      &--next {
-        margin-left: $spacing-unit;
-      }
-
-      a.c-pagination__item:hover & {
-        background-color: $color-link-text;
-        fill: $color-black;
-
-        &--previous {
-          transform: translateX(-10px);
-        }
-
-        &--next {
-          transform: translateX(10px);
-        }
-      }
+    &--previous {
+      transform: translateX(-10px);
     }
 
-
-    //
-    // c-pagination__text
-    // -------------------------------------
-
-    .c-pagination__text {
-      display: flex;
-      flex-direction: column;
-
-      @include mq($until: $mq-sm) {
-        @include inuit-hidden-visually;
-      }
+    &--next {
+      transform: translateX(10px);
     }
+  }
+}
 
 
-      //
-      // c-pagination__label
-      // -------------------------------------
+//
+// c-pagination__text
+// -------------------------------------
 
-      .c-pagination__label {
-        font-family: $font-heading;
-        @include font-size(15px);
-        text-transform: uppercase;
+.c-pagination__text {
+  display: flex;
+  flex-direction: column;
 
-        &::after {
-          content: '';
-          display: block;
-          height: 1px;
-          width: 50%;
-          margin: 0 auto;
-          background-color: currentColor;
-        }
+  // @include mq($until: $mq-sm) {
+  //   @include inuit-hidden-visually;
+  // }
+}
 
-        &.is-disabled {
-          &::after {
-            background-color: $color-grey-400;
-          }
-        }
-      }
+
+//
+// c-pagination__label
+// -------------------------------------
+
+.c-pagination__label {
+  font-family: $font-heading;
+  @include font-size(15px);
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    // width: 50%;
+    margin: 0 auto;
+    background-color: currentColor;
+  }
+
+  &.is-disabled {
+    &::after {
+      background-color: $color-grey-400;
+    }
+  }
+}
+
+
+// Pagination Spip
+// ========================================
+
+.pagination-label {
+  padding: $spacing-unit-small;
+}
+
+.pagination-items {
+  list-style: none;
+  display: flex;
+  gap: $spacing-unit-tiny;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 0;
+}
+
+.pagination-item {
+
+  &.active {
+
+    & .pagination-item-label {
+      background-color: $color-link-text;
+    }
+  }
+}
+
+.pagination-item-label {
+  padding: $spacing-unit-small;
+  display: inline-flex;
+}
+
+.lien_pagination {
+  transition: background-color .15s ease;
+
+  &:hover {
+    background-color: $color-link-text;
+  }
+}

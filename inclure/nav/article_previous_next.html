@@ -1,11 +1,11 @@
 <BOUCLE_article_previous_next(ARTICLES){id_article}>
-  <nav class="c-pagination c-pagination--previous-next">
+  <nav class="c-pagination c-pagination--previous-next switcher">
     <BOUCLE_article_precedent(ARTICLES){id_rubrique?}{precedent}{par date}{inverse  #ENV{senstri, 0}}>
-      <a href="#URL_ARTICLE" class="c-pagination__item c-pagination__item--previous[ (#ENV{class})]">
+      <a href="#URL_ARTICLE" class="c-pagination__item c-pagination__item--previous[ (#ENV{class})]" title="<:{=#ENV{label_previous}}:>[ : (#TITRE)]">
         <INCLURE{fond=images/icon-chevronLeft.svg, class='c-pagination__icon c-pagination__icon--previous'} />
         <span class="c-pagination__text">
           <span class="c-pagination__label"><:{=#ENV{label_previous}}:></span>
-          <span class="c-pagination__article-titre">[(#TITRE|couper{20})]</span>
+          <span class="c-pagination__article-titre">[(#TITRE|couper{50})]</span>
         </span>
       </a>
     </BOUCLE_article_precedent>
@@ -17,10 +17,10 @@
       </span>
     <//B_article_precedent>
     <BOUCLE_article_suivant(ARTICLES){id_rubrique?}{suivant}{par date}{inverse #ENV{senstri, 0}}>
-      <a href="#URL_ARTICLE" class="c-pagination__item c-pagination__item--next[ (#ENV{class})]">
+      <a href="#URL_ARTICLE" class="c-pagination__item c-pagination__item--next[ (#ENV{class})]" title="<:{=#ENV{label_next}}:>[ : (#TITRE)]">
         <span class="c-pagination__text">
           <span class="c-pagination__label"><:{=#ENV{label_next}}:></span>
-          <span class="c-pagination__article-titre">[(#TITRE|couper{20})]</span>
+          <span class="c-pagination__article-titre">[(#TITRE|couper{50})]</span>
         </span>
         <INCLURE{fond=images/icon-chevronRight.svg, class='c-pagination__icon c-pagination__icon--next'} />
       </a>
