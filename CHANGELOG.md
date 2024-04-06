@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.4 - 2024-04-06
+
+### Fixed
+
+- insertion de odse.js : le fichier est compressé avec les fichiers de spip et le "defer" n'est plus effectif. La principale conséquence est que le menu version mobile ne fonctionne plus. Le fichier est donc inséré depuis /header_js.
+
 ## 2.0.3 - 2024-02-09
 
 ### Added
