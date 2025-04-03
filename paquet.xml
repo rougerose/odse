@@ -1,8 +1,8 @@
 <paquet
 	prefix="odse"
-	version="2.0.4"
+	version="2.0.5"
 	etat="stable"
-	compatibilite="[4.1.0;4.2.*]"
+	compatibilite="[4.1.0;4.4.*]"
 	logo="prive/themes/spip/images/ODSE-128.png"
 	documentation=""
 >
@@ -18,11 +18,12 @@
   <necessite nom="critere_mots" compatibilite="[4.3.6;]" />
   <necessite nom="selections_editoriales" compatibilite="[2.0.5;]" />
   <necessite nom="pages" compatibilite="[2.0.0;]" />
-  <utilise nom="porte_plume_intertitres" />
-  <utilise nom="suivant_precedent" />
-  <utilise nom="metasplus" />
-  <utilise nom="bellespuces" />
-  <spip compatibilite="[4.1.0;4.2.*]">
+  <necessite nom="bellespuces" />
+  <necessite nom="porte_plume_intertitres" />
+  <necessite nom="suivant_precedent" />
+  <necessite nom="metasplus" />
+  <necessite nom="prism"/>
+  <spip compatibilite="[4.1.0;4.4.*]">
     <style type="prive" source="dist/css/odse-prive.css" />
     <script type="prive" source="dist/js/lib/glide.min.js" />
   </spip>
