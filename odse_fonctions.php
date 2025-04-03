@@ -4,19 +4,21 @@ if (!defined("_ECRIRE_INC_VERSION")) {
   return;
 }
 
+include_spip('inc/config');
 
 /**
  * Afficher le délai à partir duquel un article est considéré comme périmé.
  * @return int délai exprimé en mois.
  */
 function odse_afficher_delai_peremption_articles() {
-  $config = unserialize($GLOBALS['meta']['odse']);
-  if (isset($config['articles_delai_peremption'])) {
-    $config = $config['articles_delai_peremption'];
-  } else {
-    $config = $GLOBALS['odse_articles_delai_peremption'];
-  }
-  return $config;
+	$config = lire_config('odse');
+	if ($config) {
+		$delai = $config['articles_delai_peremption'];
+	} else {
+		$delai = $GLOBALS['odse_articles_delai_peremption'];
+		ecrire_config('odse/articles_delai_peremption', $delai);
+	}
+  return $delai;
 }
 
 
